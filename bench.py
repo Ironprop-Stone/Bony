@@ -28,6 +28,8 @@ class designConst:
 		self.max_rc_area		= 0.9
 		self.min_rc_area		= 0.4
 		self.max_diff			= 25
+		# --------------------
+		self.circuit_name		= 'Default'
 	def __del__(self):
 		pass	
 	
@@ -379,10 +381,16 @@ def check_reconvergent(stageModule, design):
 	if not (rc_area_ratio > design.min_rc_area and rc_area_ratio < design.max_rc_area):
 		return False
 
-	print('-----------------------------------')
-	print('Max level : {:}, '.format(max_level_diff))
-	print('Reconvergent nodes: {:}/{:} = {:}'.format(tot_rc_nodes, tot_nodes, rc_nodes_ratio))
-	print('Reconvergent area: {:}/{:} = {:}'.format(len(rc_area_list), tot_nodes, rc_area_ratio))
+	outputfile = open('random_circuits.log', 'a')
+	outputfile.write('-----------------------------------\n')
+	outputfile.write('Circuit Name: {}\n'.format(design.circuit_name))
+	outputfile.write('Number of Nodes: {:}\n'.format(tot_nodes))
+	outputfile.write('Max level : {:}, \n'.format(max_level_diff))
+	outputfile.write('Reconvergent nodes: {:}/{:} = {:}\n'.format(tot_rc_nodes, tot_nodes, rc_nodes_ratio))
+	outputfile.write('Reconvergent area: {:}/{:} = {:}\n'.format(len(rc_area_list), tot_nodes, rc_area_ratio))
+	outputfile.write('-----------------------------------\n')
+	outputfile.write('\n')
+	outputfile.close()
 	return True
 
 def dfs_rc_circuits(node_serNum, vis, dst_serNum, result, stageModule, serNum2MatrixIdx):
