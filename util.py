@@ -26,6 +26,7 @@ def parse_bench(file_name):
                 next_list[r].append(c)
                 pre_list[c].append(r)
 
+    f.close()
     return x_data, level_list, pre_list, next_list
 
 def pre_process(data):

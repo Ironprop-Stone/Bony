@@ -1,11 +1,11 @@
 from generate_dataset import *
 
-MAX_TIMES = 5
-NAME_HEAD = 'more_ll_'
+MAX_TIMES = 10
+NAME_HEAD = 'test_'
 
 if __name__ == '__main__':
-    bench_folder = './large_100k/'
-    output_log = open('./large_100k.log', 'w')
+    bench_folder = './bench/'
+    output_log = open('./bench.log', 'w')
 
     for i in range(MAX_TIMES):
         bench_name = NAME_HEAD + str(i).zfill(2)

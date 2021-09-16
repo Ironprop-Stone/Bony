@@ -23,6 +23,7 @@ class designConst:
 		self.IterationCount     = 5
 		self.mainIterate		= 3
 		self.max_tot_nodes		= 1000
+		self.min_tot_nodes		= 100
 		# --------------------
 		self.max_rc_nodes     	= 0.3
 		self.min_rc_nodes		= 0.1
@@ -69,7 +70,7 @@ def growGraph(stageModule, design):
 			stage_num_sum += stage_num[i]
 			if stage_num_sum > design.max_tot_nodes:
 				break
-		if stage_num_sum < design.max_tot_nodes and stage_num_sum > 100000:
+		if stage_num_sum < design.max_tot_nodes and stage_num_sum > design.min_tot_nodes:
 			break
 
 	gateCount = 0

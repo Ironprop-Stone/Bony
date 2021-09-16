@@ -17,6 +17,7 @@ def generate_circuit(circuit_name, filename):
         design.max_nodes_in_stage = min_max_no_nodes_level[1]
         design.min_nodes_in_stage = min_max_no_nodes_level[0]
         design.max_tot_nodes = max_tot_nodes
+        design.min_tot_nodes = min_tot_nodes
         design.circuit_name = circuit_name
 
         stageModule = []
@@ -29,7 +30,7 @@ def generate_circuit(circuit_name, filename):
     return circuit_info
 
 def generate_dataset(bench_folder, MAX_TIMES):
-    outputfile = open('random_circuits.log', 'w')
+    outputfile = open('bench.log', 'w')
     outputfile.close()
     for i in range(MAX_TIMES):
         bench_name = 'SAT_'+str(i).zfill(3)
@@ -59,5 +60,6 @@ def generate_dataset(bench_folder, MAX_TIMES):
 
 
 if __name__ == '__main__':
-    bench_folder = './random_circuits/'
-    generate_dataset(bench_folder)
+    bench_folder = './bench/'
+    generate_dataset(bench_folder, 100)
+    generate_circuit('test', './bench/test.bench')
