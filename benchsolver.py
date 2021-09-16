@@ -191,6 +191,7 @@ def output_subcircuit(x_data, level_list, pre_list, sc_nodes, po_idx, filename):
                         else:
                             line += x_data[pre_idx][0] + ', '
                     targetfile.write(line)
+    print('[SUCCESS] Subcircuit PO: {} with {:} nodes'.format(x_data[po_idx][0], len(sc_nodes)))
     targetfile.close()
 
 if __name__ == '__main__':
