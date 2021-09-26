@@ -1,0 +1,61 @@
+module test_05 (N1, N2, N3, N4, N5, N6, N7, N8, N9, N31, N32);
+
+input N1; 
+input N2; 
+input N3; 
+input N4; 
+input N5; 
+input N6; 
+input N7; 
+input N8; 
+input N9; 
+
+output N31; 
+output N32; 
+
+wire N10; 
+wire N11; 
+wire N12; 
+wire N13; 
+wire N14; 
+wire N15; 
+wire N16; 
+wire N17; 
+wire N18; 
+wire N19; 
+wire N20; 
+wire N21; 
+wire N22; 
+wire N23; 
+wire N24; 
+wire N25; 
+wire N26; 
+wire N27; 
+wire N28; 
+wire N29; 
+wire N30; 
+
+assign N10 = ~(N6); 
+assign N11 = ~(N9); 
+assign N12 = ~(N2); 
+assign N13 = N5 & N2; 
+assign N14 = ~(N11); 
+assign N15 = ~(N10); 
+assign N16 = ~(N13); 
+assign N17 = ~(N10); 
+assign N18 = ~(N3); 
+assign N19 = ~(N3); 
+assign N20 = N14 | N6; 
+assign N21 = N4 | N12 | N17; 
+assign N22 = N2 | N18; 
+assign N23 = N8 & N10; 
+assign N24 = ~(N17); 
+assign N25 = ~(N11); 
+assign N26 = ~(N6); 
+assign N27 = ~(N5); 
+assign N28 = N10 & N21 & N22 & N25 & N11; 
+assign N29 = N15 | N20 | N19; 
+assign N30 = N6 & N16 & N17 & N19 & N5; 
+assign N31 = N1 & N7 & N26 & N28 & N29 & N30; 
+assign N32 = N3 | N11 | N13 | N18 | N23 | N24 | N27; 
+endmodule

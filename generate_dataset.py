@@ -18,6 +18,7 @@ def generate_circuit(circuit_name, filename):
         design.min_nodes_in_stage = min_max_no_nodes_level[0]
         design.max_tot_nodes = max_tot_nodes
         design.min_tot_nodes = min_tot_nodes
+        design.no_nodes = random.randint(min_tot_nodes, max_tot_nodes)
         design.circuit_name = circuit_name
 
         stageModule = []

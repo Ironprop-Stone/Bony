@@ -5,11 +5,15 @@
 from sys import argv
 import random
 from collections import Counter
+import glob
+import platform
+from parameter import *
 
 # from graphplot import exportGMLformat
 # arg section
 
-gateStates = ["AND", "NAND", "OR", "NOR", "XOR"]
+# gateStates = ["AND", "NAND", "OR", "NOR", "XOR"]
+gateStates = ['AND', 'OR']
 
 # object: Design constraints for the design
 class designConst:
@@ -32,6 +36,7 @@ class designConst:
 		self.max_diff			= 999
 		# --------------------
 		self.circuit_name		= 'Default'
+		self.no_nodes			= -1
 	def __del__(self):
 		pass	
 	
@@ -60,18 +65,32 @@ class Stage:
 	
 # grows the entire graph structure		
 def growGraph(stageModule, design):
-	stage_num = [0] * design.stages
-	while True:
-		for idx in range(len(stage_num)):
-			stage_num[idx] = 0
-		stage_num_sum = 0
-		for i in range(design.stages):
-			stage_num[i] = random.randint(design.min_nodes_in_stage, design.max_nodes_in_stage)
-			stage_num_sum += stage_num[i]
-			if stage_num_sum > design.max_tot_nodes:
-				break
-		if stage_num_sum < design.max_tot_nodes and stage_num_sum > design.min_tot_nodes:
-			break
+	gen_done = False
+	retry_times = 0
+	while not gen_done:
+		if retry_times > 0 and retry_times % 1000 == 0:
+			design.no_nodes = random.randint(design.min_tot_nodes, design.max_tot_nodes)
+			design.max_diff = random.randint(max_diff_range[0], max_diff_range[1])
+		tmp_shuffle = [0] * design.no_nodes
+		last_idx = 0
+		stage_num = []
+		for level in range(design.stages - 1):
+			tmp_shuffle[level] = 1
+		random.shuffle(tmp_shuffle)
+		for idx, ele in enumerate(tmp_shuffle):
+			if ele == 1:
+				level_len = idx - last_idx
+				if level_len < design.min_nodes_in_stage or level_len > design.max_nodes_in_stage:
+					break
+				stage_num.append(level_len)
+				last_idx = idx
+		stage_num.append(design.no_nodes - last_idx)
+		if design.no_nodes - last_idx != 0 and len(stage_num) == design.stages:
+			gen_done = True
+		else:
+			retry_times += 1
+	for level in range(design.stages):
+		print('Level: {}, len: {}'.format(level, stage_num[level]))
 
 	gateCount = 0
 	for i in range(design.stages):
@@ -83,7 +102,7 @@ def growGraph(stageModule, design):
 			gateCount += 1
 			gate.serNum = gateCount
 			stageModule[i].stageGates.append(gate)
-	print('[INFO] No of Gates: {:}'.format(gateCount))
+	print('[INFO] No of Gates: {:}, Level: {:}'.format(gateCount, design.stages))
 	return gateCount		
 					
 					
@@ -315,8 +334,82 @@ def generateBenchMarkCircuit(stageModule, targetfile):
 					else:
 						line += str(node.fanInList[fanInRange]) +", "
 				line += ")\n"
-				targetfile.write(line)						
-				
+				targetfile.write(line)			
+							
+def generateVerilogMarkCircuit(stageModule, targetfile):
+	if platform.system() == 'Linux':
+		name = targetfile.name.split("/")
+		name = name[-1].split(".")
+	else:
+		name = targetfile.name.split("\\")
+		name = name[1].split(".")
+	circuit_name = name[0]
+	pi_po_line = ''
+	for i in range(len(stageModule)):
+		for j in range(len(stageModule[i].stageGates)):
+			node = stageModule[i].stageGates[j]
+			if node.isInputNode or node.isOutputNode:
+				pi_po_line += 'N' + str(node.serNum) + ', '
+	pi_po_line = pi_po_line[:-2]
+	first_line = 'module {} ({});\n'.format(circuit_name, pi_po_line)
+	targetfile.write(first_line)
+	targetfile.write('\n')		
+
+	for i in range(len(stageModule)):
+		for j in range(len(stageModule[i].stageGates)):
+			node = stageModule[i].stageGates[j]
+			if node.isInputNode:
+				line = "input " + 'N' + str(node.serNum) + "; \n"
+				targetfile.write(line)				
+
+	targetfile.write('\n')	
+	for i in range(len(stageModule)):
+		for j in range(len(stageModule[i].stageGates)):
+			node = stageModule[i].stageGates[j]
+			if node.isOutputNode:
+				line = "output " + 'N' + str(node.serNum) + "; \n"
+				targetfile.write(line)
+
+	targetfile.write('\n')	
+	for i in range(len(stageModule)):
+		for j in range(len(stageModule[i].stageGates)):
+			node = stageModule[i].stageGates[j]
+			if not node.isInputNode and not node.isOutputNode:
+				line = "wire " + 'N' + str(node.serNum) + "; \n"
+				targetfile.write(line)
+	
+	targetfile.write('\n')					
+	for i in range(len(stageModule)):
+		for j in range(len(stageModule[i].stageGates)):
+			node = stageModule[i].stageGates[j]
+			if not node.isInputNode: 			
+				line = 'assign ' + 'N' + str(node.serNum) +" = "
+				gate_symbol = gateType2symbol(node.gateType)
+				if gate_symbol == '~':
+					line += gate_symbol+'({}); \n'.format('N' + str(node.fanInList[0]))
+				else:
+					for fanInRange in range(len(node.fanInList)):
+						if fanInRange == len(node.fanInList) - 1:
+							line += 'N' + str(node.fanInList[fanInRange]) + '; \n'
+						else:
+							line += 'N' + str(node.fanInList[fanInRange]) + ' ' + gate_symbol + ' '
+				targetfile.write(line)			
+
+	targetfile.write('endmodule\n')
+
+def gateType2symbol(gate_type):
+	if gate_type == 'AND':
+		return '&'
+	elif gate_type == 'OR':
+		return '|'
+	elif gate_type == 'XOR':
+		return '^'
+	elif gate_type == 'NOT':
+		return '~'
+	else:
+		print('[ERROR] Type Unknown')
+		raise
+
 
 # non random : normalize method: 
 def nonRandomNormalize(stageModule,remFO,remFI):
@@ -454,7 +547,8 @@ def iterateSolveandNormalize(stageModule, targetfile, design):
 			return False, ''
 		print("design sucess!")
 		allocateGateNotation(stageModule)
-		generateBenchMarkCircuit(stageModule, targetfile)
+		# generateBenchMarkCircuit(stageModule, targetfile)
+		generateVerilogMarkCircuit(stageModule, targetfile)
 		#exportGMLformat(stageModule)
 		return True, circuit_info
 	else:
