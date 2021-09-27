@@ -1,8 +1,11 @@
 INPUT(N1)
 INPUT(N2)
 INPUT(N3)
+INPUT(N4)
 
-OUTPUT(N4)
+OUTPUT(_29_)
+OUTPUT(_30_)
+OUTPUT(_31_)
 
 _29_ = AND(_38_, _39_)
 _30_ = OR(_36_, _40_)

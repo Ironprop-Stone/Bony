@@ -4,6 +4,11 @@ INPUT(N3)
 INPUT(N4)
 INPUT(N5)
 
+OUTPUT(_15_)
+OUTPUT(_16_)
+OUTPUT(_17_)
+OUTPUT(_18_)
+OUTPUT(_19_)
 
 _15_ = OR(N2, _28_)
 _16_ = NOT(_29_)

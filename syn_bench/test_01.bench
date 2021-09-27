@@ -3,6 +3,10 @@ INPUT(N2)
 INPUT(N3)
 INPUT(N4)
 
+OUTPUT(_02_)
+OUTPUT(_03_)
+OUTPUT(_04_)
+OUTPUT(_05_)
 
 _02_ = OR(N1, N4)
 _03_ = AND(_09_, _08_)

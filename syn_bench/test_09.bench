@@ -6,6 +6,11 @@ INPUT(N5)
 INPUT(N6)
 INPUT(N7)
 
+OUTPUT(_18_)
+OUTPUT(_19_)
+OUTPUT(_20_)
+OUTPUT(_21_)
+OUTPUT(_22_)
 
 _18_ = OR(_27_, N1)
 _19_ = OR(_28_, _29_)

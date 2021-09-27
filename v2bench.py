@@ -13,6 +13,8 @@ class Gate:
         self.gate_name = gate_name
         self.gate_type = ''
         self.pre_list = []
+        self.next_list = []
+        self.is_po = False
         self.enable = False
 
 def new_gate(gate_name):
@@ -29,11 +31,13 @@ def find_keys_list(name_list, find_keys):
                 break
     return res
 
-def is_const(gate_name):
-    if name2idx['1\'h0'] == name2idx[gate_name] or name2idx['1\'h1'] == name2idx[gate_name]:
-        return True
-    else:
-        return False
+def back_non_buff(idx):
+    res = idx
+    gate = allGateVec[res]
+    while gate.gate_type == 'BUF':
+        res = gate.pre_list[0]
+        gate = allGateVec[res]
+    return res
     
 def convert_verilog_bench(verilog_file, bench_file):
     v_file = open(verilog_file, 'r')
@@ -60,6 +64,10 @@ def convert_verilog_bench(verilog_file, bench_file):
             text = line.split(' ')[-1]
             new_gate(text)
             name2idx[text] = len(name2idx)
+            if 'input' in line:
+                allGateVec[name2idx[text]].gate_type = 'INPUT'
+            if 'output' in line:
+                allGateVec[name2idx[text]].is_po = True
             proc_v_lineList.append(line)
             node_cnt += 1
         elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line:
@@ -77,46 +85,15 @@ def convert_verilog_bench(verilog_file, bench_file):
             proc_v_lineList.append(line)
         line_idx += 1
 
-    # Connection        
-    uf = UnionFind(node_cnt)
     for line in proc_v_lineList:
-        if 'assign' in line:
-            line = line.split(' ')
-            src_name = line[1]
-            dst_name = line[3]
-            uf.union(name2idx[src_name], name2idx[dst_name])
-        elif 'BUF' in line:
-            gate_type = line.split(' ')[0]
-            line = line.replace(',', '').replace(';', '')
-            name_list_tmp = line.split('(')
-            name_list = []
-            for tmp_line in name_list_tmp:
-                name_list += tmp_line.split(')')
-            res = find_keys_list(name_list, ['.A', '.Y'])
-            src_name = res[0]
-            dst_name = res[1]
-            uf.union(name2idx[src_name], name2idx[dst_name])
-    tmp_name2idx = name2idx.copy()
-    for gate_name in tmp_name2idx:
-        name2idx[gate_name] = uf.find(tmp_name2idx[gate_name])
-        allGateVec[name2idx[gate_name]].enable = True
-
-    # New Gates
-    for line in proc_v_lineList:
-        if 'input' in line:
-            text = line.split(' ')[-1]
-            allGateVec[name2idx[text]].gate_type = 'INPUT'
-        elif 'output' in line:
-            text = line.split(' ')[-1]
-            allGateVec[name2idx[text]].gate_type = 'OUTPUT'
-        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line:
+        if 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line:
             line = line.replace(',', '').replace(';', '')
             gate_type = line.split(' ')[0]
             name_list_tmp = line.split('(')
             name_list = []
             for tmp_line in name_list_tmp:
                 name_list += tmp_line.split(')')
-            if gate_type == 'NOT':
+            if gate_type == 'NOT' or gate_type == 'BUF':
                 res = find_keys_list(name_list, ['.A', '.Y'])
                 src_name = res[0]
                 dst_name = res[1]
@@ -129,18 +106,46 @@ def convert_verilog_bench(verilog_file, bench_file):
                 dst_name = res[2]
                 allGateVec[name2idx[dst_name]].gate_type = gate_type
                 allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name_1], name2idx[src_name_2]]
+        elif 'assign' in line:
+            name_list = line.split(' ')
+            dst_name = name_list[1]
+            src_name = name_list[3]
+            allGateVec[name2idx[dst_name]].gate_type = 'BUF'
+            allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
+
+    # Find the non_buff gate
+    for gate in allGateVec:
+        if gate.gate_type != 'BUF':
+            for idx, pre_idx in enumerate(gate.pre_list):
+                gate.pre_list[idx] = back_non_buff(pre_idx)
+    for idx, gate in enumerate(allGateVec):
+        if gate.is_po and gate.gate_type == 'BUF':
+            non_buf_idx = back_non_buff(idx)
+            gate.is_po = False
+            if allGateVec[non_buf_idx].gate_type != 'INPUT' and non_buf_idx !=0 and non_buf_idx!=1:
+                allGateVec[non_buf_idx].is_po = True
+    
+    for idx, gate in enumerate(allGateVec):
+        for pre_idx in gate.pre_list:
+            allGateVec[pre_idx].next_list.append(idx)
     
     for gate in allGateVec:
-        if gate.gate_type == 'INPUT' and not is_const(gate.gate_name):
+        if gate.gate_type == 'INPUT':
             b_file.write('INPUT({:})\n'.format(gate.gate_name))
-    b_file.write('\n')
-    for gate in allGateVec:
-        if gate.gate_type == 'OUTPUT' and not is_const(gate.gate_name):
-            b_file.write('OUTPUT({:})\n'.format(gate.gate_name))
     b_file.write('\n')
 
     for gate in allGateVec:
-        if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT':
+        if gate.is_po:
+            is_vaild = True
+            for pre_idx in gate.pre_list:
+                if pre_idx == 0 or pre_idx == 1:
+                    is_vaild = False
+            if is_vaild:
+                b_file.write('OUTPUT({:})\n'.format(gate.gate_name))
+    b_file.write('\n')
+
+    for gate in allGateVec:
+        if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT' or gate.is_po:
             line = gate.gate_name + ' = ' + gate.gate_type + '('
             for pre_idx in gate.pre_list:
                 if pre_idx == gate.pre_list[-1]:
@@ -169,7 +174,7 @@ def main():
             name = file.split("\\")
             name = name[1].split(".")
         
-        # if name[0] != 'test_07':
+        # if name[0] != 'test_00':
         #     continue
 
         print('[INFO] Converting Circuit: {}'.format(name[0]))
