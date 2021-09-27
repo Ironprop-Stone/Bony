@@ -1,0 +1,13 @@
+INPUT(N1)
+
+OUTPUT(N2)
+OUTPUT(N3)
+
+_35_ = OR(_49_, N2)
+_37_ = NOT(N2)
+_40_ = AND(N1, N2)
+_41_ = NOT(N3)
+_42_ = AND(_41_, N1)
+_45_ = AND(N3, N2)
+_49_ = NOT(N1)
+
