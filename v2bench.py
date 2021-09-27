@@ -144,6 +144,7 @@ def convert_verilog_bench(verilog_file, bench_file):
                 b_file.write('OUTPUT({:})\n'.format(gate.gate_name))
     b_file.write('\n')
 
+    no_gate = 0
     for gate in allGateVec:
         if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT' or gate.is_po:
             line = gate.gate_name + ' = ' + gate.gate_type + '('
@@ -153,11 +154,12 @@ def convert_verilog_bench(verilog_file, bench_file):
                 else:
                     line += allGateVec[pre_idx].gate_name + ', '
             b_file.write(line)
+            no_gate += 1
     b_file.write('\n')
 
     b_file.close()
     v_file.close()
-    print("[SUCCESS] Convert {:} Done".format(verilog_file))
+    print("[SUCCESS] Convert {:} Done, with {:} nodes".format(verilog_file, no_gate))
 
 
 def main():
