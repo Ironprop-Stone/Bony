@@ -59,7 +59,9 @@ def convert_verilog_bench(verilog_file, bench_file):
     node_cnt += 1
     while line_idx < len(v_lineList):
         line = v_lineList[line_idx]
-        if 'wire' in line or 'output' in line or 'input' in line:
+        if '/*' == line.rstrip()[:2] or 'module' in line or '(*' == line.rstrip()[:2]:
+            pass
+        elif 'wire' in line or 'output' in line or 'input' in line:
             line = line.lstrip().rstrip().replace('\n', '').replace(';', '')
             text = line.split(' ')[-1]
             new_gate(text)
@@ -70,7 +72,8 @@ def convert_verilog_bench(verilog_file, bench_file):
                 allGateVec[name2idx[text]].is_po = True
             proc_v_lineList.append(line)
             node_cnt += 1
-        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line:
+        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line \
+            or 'XOR' in line or 'NAND' in line or 'NOR' in line:
             new_line = ''
             while not ';' in line:
                 line = line.lstrip().rstrip().replace('\n', '')
@@ -86,7 +89,17 @@ def convert_verilog_bench(verilog_file, bench_file):
         line_idx += 1
 
     for line in proc_v_lineList:
-        if 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line:
+        if 'input' in line or 'output' in line:
+            continue
+        elif 'assign' in line:
+            line = line.replace(';', '')
+            name_list = line.split(' ')
+            dst_name = name_list[1]
+            src_name = name_list[3]
+            allGateVec[name2idx[dst_name]].gate_type = 'BUF'
+            allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
+        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line \
+            or 'XOR' in line or 'NAND' in line or 'NOR' in line:
             line = line.replace(',', '').replace(';', '')
             gate_type = line.split(' ')[0]
             name_list_tmp = line.split('(')
@@ -99,19 +112,14 @@ def convert_verilog_bench(verilog_file, bench_file):
                 dst_name = res[1]
                 allGateVec[name2idx[dst_name]].gate_type = gate_type
                 allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
-            elif gate_type == 'AND' or gate_type == 'OR':
+            else:
                 res = find_keys_list(name_list, ['.A', '.B', '.Y'])
                 src_name_1 = res[0]
                 src_name_2 = res[1]
                 dst_name = res[2]
                 allGateVec[name2idx[dst_name]].gate_type = gate_type
                 allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name_1], name2idx[src_name_2]]
-        elif 'assign' in line:
-            name_list = line.split(' ')
-            dst_name = name_list[1]
-            src_name = name_list[3]
-            allGateVec[name2idx[dst_name]].gate_type = 'BUF'
-            allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
+        
 
     # Find the non_buff gate
     for gate in allGateVec:
@@ -146,7 +154,8 @@ def convert_verilog_bench(verilog_file, bench_file):
 
     no_gate = 0
     for gate in allGateVec:
-        if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT' or gate.is_po:
+        if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT' or gate.is_po \
+            or gate.gate_type == 'NAND' or gate.gate_type == 'NOR' or gate.gate_type == 'XOR': 
             line = gate.gate_name + ' = ' + gate.gate_type + '('
             for pre_idx in gate.pre_list:
                 if pre_idx == gate.pre_list[-1]:
@@ -175,10 +184,10 @@ def main():
         else:
             name = file.split("\\")
             name = name[1].split(".")
-        
-        # if name[0] != 'test_00':
-        #     continue
 
+        # if name[0] != 'b15_C':
+        #     continue
+        
         print('[INFO] Converting Circuit: {}'.format(name[0]))
         bench_file = './syn_bench/' + name[0] + '.bench'
         convert_verilog_bench(file, bench_file)

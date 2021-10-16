@@ -8,6 +8,7 @@ from collections import Counter
 import glob
 import platform
 from parameter import *
+from union_find import UnionFind
 
 # from graphplot import exportGMLformat
 # arg section
@@ -29,14 +30,17 @@ class designConst:
 		self.max_tot_nodes		= 1000
 		self.min_tot_nodes		= 100
 		# --------------------
-		self.max_rc_nodes     	= 0.3
-		self.min_rc_nodes		= 0.1
+		self.max_rc_nodes     	= 0.99
+		self.min_rc_nodes		= 0.2
 		self.max_rc_area		= 0.99
 		self.min_rc_area		= 0.6
 		self.max_diff			= 999
 		# --------------------
 		self.circuit_name		= 'Default'
 		self.no_nodes			= -1
+		# --------------------
+		self.serNum2Gate		= {}
+		self.dis_connection		= []
 	def __del__(self):
 		pass	
 	
@@ -70,7 +74,8 @@ def growGraph(stageModule, design):
 	while not gen_done:
 		if retry_times > 0 and retry_times % 1000 == 0:
 			design.no_nodes = random.randint(design.min_tot_nodes, design.max_tot_nodes)
-			design.max_diff = random.randint(max_diff_range[0], max_diff_range[1])
+			design.stages = random.randint(level_range[0], level_range[1])
+			print('[INFO] Retry times: {:}, # Nodes: {:}, # Levels: {:}'.format(retry_times, design.no_nodes, design.stages))
 		tmp_shuffle = [0] * design.no_nodes
 		last_idx = 0
 		stage_num = []
@@ -102,6 +107,7 @@ def growGraph(stageModule, design):
 			gateCount += 1
 			gate.serNum = gateCount
 			stageModule[i].stageGates.append(gate)
+			design.serNum2Gate[gate.serNum] = gate
 	print('[INFO] No of Gates: {:}, Level: {:}'.format(gateCount, design.stages))
 	return gateCount		
 					
@@ -159,51 +165,9 @@ def generateRandStartandEndPoints(appRandStart,appRandEnd, design):
 	return randStart,randEnd
 		
 
-# determine the interconnects: generate complete graph
-# abandoned
-def determineInterConnects(stageModule, design):
-	# map the fan-out with single dimension for each node random process
-	for i in range(len(stageModule)-1):
-		for j in range(len(stageModule[i].stageGates)): 
-			node = stageModule[i].stageGates[j]
-			# map the fan-out with single dimension for each node random process
-			#	-doesn't gurantee that every node has a fan-in or fanout
-			#	- output nodes will not have any fan-out(s) and input nodes no fan-ins(s)
-			#	-random map: gurantee max fan-in not violated: rerun of rand return node allocation			
-			if not node.isOutputNode:			
-				#allocRandStage = random.randint(i+1,design.stages-1) 
-				randStart,randEnd = generateRandStartandEndPoints(i+1,design.stages-1, design)
-				allocRandStage = random.randint(randStart,randEnd) 
-				allocRandNode = random.randint(0,len(stageModule[allocRandStage].stageGates)-1)
-				nodeConnect = stageModule[allocRandStage].stageGates[allocRandNode]
-				if not nodeConnect.isInputNode: 
-					if (nodeConnect.serNum not in node.fanOutList) and (node.serNum not in nodeConnect.fanInList):
-						if (len(node.fanOutList) < design.max_fan_out) and (len(nodeConnect.fanInList) < design.max_fan_in):
-							node.fanOutList.append(nodeConnect.serNum)
-							nodeConnect.fanInList.append(node.serNum)
-
-	# map the fan-in with single dimension for each node random process
-	for i in range(1,len(stageModule)):
-		for j in range(len(stageModule[i].stageGates)): 
-			node = stageModule[i].stageGates[j]
-			# map the fan-in with single dimension for each node random process
-			#	-doesn't gurantee that every node has a fan-in or fanout
-			#	- output nodes will not have any fan-out(s) and input nodes no fan-ins(s)				 
-			if not node.isInputNode:
-				#allocRandStage = random.randint(0,i-1)	
-				randStart,randEnd = generateRandStartandEndPoints(0,i-1, design)
-				allocRandStage = random.randint(randStart,randEnd) 
-				allocRandNode = random.randint(0,len(stageModule[allocRandStage].stageGates)-1)
-				nodeConnect = stageModule[allocRandStage].stageGates[allocRandNode]
-				if not nodeConnect.isOutputNode:
-					if (nodeConnect.serNum not in node.fanInList) and (node.serNum not in nodeConnect.fanOutList):
-						if (len(node.fanInList) < design.max_fan_in) and (len(nodeConnect.fanOutList) < design.max_fan_out):
-							node.fanInList.append(nodeConnect.serNum)
-							nodeConnect.fanOutList.append(node.serNum)
-
 
 # fast: determine the interconnects: generate complete graph	
-def determineInterConnectsFast(stageModule, design):
+def determineInterConnectsFast(stageModule, design, uf):
 	# map the fan-out with single dimension for each node random process
 	for i in range(len(stageModule)-1):
 		for j in range(len(stageModule[i].stageGates)): 
@@ -223,7 +187,8 @@ def determineInterConnectsFast(stageModule, design):
 					if (nodeConnect.serNum not in node.fanOutList) and (node.serNum not in nodeConnect.fanInList):
 						if (len(node.fanOutList) < design.max_fan_out) and (len(nodeConnect.fanInList) < design.max_fan_in):
 							node.fanOutList.append(nodeConnect.serNum)
-							nodeConnect.fanInList.append(node.serNum)							
+							nodeConnect.fanInList.append(node.serNum)		
+							uf.union(node.serNum-1, nodeConnect.serNum-1)
 			
 			# map the fan-in with single dimension for each node random process
 			if not node.isInputNode:
@@ -237,11 +202,12 @@ def determineInterConnectsFast(stageModule, design):
 					if (nodeConnect.serNum not in node.fanInList) and (node.serNum not in nodeConnect.fanOutList):
 						if (len(node.fanInList) < design.max_fan_in) and (len(nodeConnect.fanOutList) < design.max_fan_out):
 							node.fanInList.append(nodeConnect.serNum)
-							nodeConnect.fanOutList.append(node.serNum)				
+							nodeConnect.fanOutList.append(node.serNum)	
+							uf.union(node.serNum-1, nodeConnect.serNum-1)			
 
 
 # stage analysis for free fanin and fanouts that can be accomodated for a complete connected network
-def normalizeInterconnects(stageModule, design):
+def normalizeInterconnects(stageModule, design, uf):
 	remFO = []
 	remFI = []
 	for i in range(len(stageModule)):
@@ -260,6 +226,7 @@ def normalizeInterconnects(stageModule, design):
 										len(nodeConnect.fanInList) < design.max_fan_in + 1):
 									node.fanOutList.append(nodeConnect.serNum)
 									nodeConnect.fanInList.append(node.serNum)
+									uf.union(node.serNum-1, nodeConnect.serNum-1)
 									break
 					if not len(node.fanOutList):
 						remFO.append(node.serNum)
@@ -276,9 +243,33 @@ def normalizeInterconnects(stageModule, design):
 										len(nodeConnect.fanOutList) < design.max_fan_out + 1):
 									node.fanInList.append(nodeConnect.serNum)
 									nodeConnect.fanOutList.append(node.serNum)
+									uf.union(node.serNum-1, nodeConnect.serNum-1)
+									break
 					if not len(node.fanInList):
 						remFI.append(node.serNum)
-
+	
+	new_dis_connection = []
+	for idx in design.dis_connection:
+		if not uf.is_connected(0, node.serNum-1):
+			node = design.serNum2Gate[idx]
+			for times in range(50):
+				allocRandStage = random.randint(i + 1, design.stages - 1)
+				allocRandNode = random.randint(0, len(stageModule[allocRandStage].stageGates) - 1)
+				nodeConnect = stageModule[allocRandStage].stageGates[allocRandNode]
+				if not nodeConnect.isInputNode:
+					if (nodeConnect.serNum not in node.fanOutList) and (
+							node.serNum not in nodeConnect.fanInList):
+						if (len(node.fanOutList) < design.max_fan_out + 1) and (
+								len(nodeConnect.fanInList) < design.max_fan_in + 1):
+							node.fanOutList.append(nodeConnect.serNum)
+							nodeConnect.fanInList.append(node.serNum)
+							uf.union(node.serNum-1, nodeConnect.serNum-1)
+							break
+			if not uf.is_connected(0, node.serNum-1):
+				remFO.append(node.serNum)
+				new_dis_connection.append(idx)
+	design.dis_connection = new_dis_connection.copy()
+	
 	return remFO,remFI
 
 
@@ -415,7 +406,7 @@ def gateType2symbol(gate_type):
 def nonRandomNormalize(stageModule,remFO,remFI):
 	print("It Wont work _critic :P ")
 
-def check_reconvergent(stageModule, design):
+def check_reconvergent(stageModule, design, uf):
 	tot_nodes = 0
 	FOL = []
 	source_node_list = []
@@ -441,44 +432,44 @@ def check_reconvergent(stageModule, design):
 	###########################################
 	# Check Reconvergent Noodes
 	###########################################
-	# for level in range(len(stageModule)):
-	# 	if level == 0:
-	# 		for idx, node in enumerate(stageModule[level].stageGates):
-	# 			if node.is_branch == 1:
-	# 				FOL[level][idx].append(node.serNum)
-	# 	else:
-	# 		for idx, node in enumerate(stageModule[level].stageGates):
-	# 			FOL_tmp = []
-	# 			for pre_serNum in node.fanInList:
-	# 				pre_level, pre_idx = serNum2MatrixIdx[pre_serNum]
-	# 				FOL_tmp += FOL[pre_level][pre_idx]
-	# 				FOL_cnt_dist = Counter(FOL_tmp)
-	# 				source_node_idx = 0
-	# 				source_node_level = -1
-	# 				is_rc = False
-	# 				for dist_idx in FOL_cnt_dist:
-	# 					if FOL_cnt_dist[dist_idx] > 1:
-	# 						is_rc = True
-	# 						if serNum2MatrixIdx[dist_idx][0] > source_node_level:
-	# 							source_node_level = serNum2MatrixIdx[dist_idx][0]
-	# 							source_node_idx = dist_idx
-	# 				if is_rc:
-	# 					source_node_list[level][idx] = source_node_idx
-	# 				else:
-	# 					source_node_list[level][idx] = -1
-	# 				FOL[level][idx] = list(set(FOL_tmp))
-	# 				if node.is_branch:
-	# 					FOL[level][idx].append(node.serNum)
+	for level in range(len(stageModule)):
+		if level == 0:
+			for idx, node in enumerate(stageModule[level].stageGates):
+				if node.is_branch == 1:
+					FOL[level][idx].append(node.serNum)
+		else:
+			for idx, node in enumerate(stageModule[level].stageGates):
+				FOL_tmp = []
+				for pre_serNum in node.fanInList:
+					pre_level, pre_idx = serNum2MatrixIdx[pre_serNum]
+					FOL_tmp += FOL[pre_level][pre_idx]
+					FOL_cnt_dist = Counter(FOL_tmp)
+					source_node_idx = 0
+					source_node_level = -1
+					is_rc = False
+					for dist_idx in FOL_cnt_dist:
+						if FOL_cnt_dist[dist_idx] > 1:
+							is_rc = True
+							if serNum2MatrixIdx[dist_idx][0] > source_node_level:
+								source_node_level = serNum2MatrixIdx[dist_idx][0]
+								source_node_idx = dist_idx
+					if is_rc:
+						source_node_list[level][idx] = source_node_idx
+					else:
+						source_node_list[level][idx] = -1
+					FOL[level][idx] = list(set(FOL_tmp))
+					if node.is_branch:
+						FOL[level][idx].append(node.serNum)
 
-	# tot_rc_nodes = 0
-	# for level in range(len(stageModule)):
-	# 	for idx, node in enumerate(stageModule[level].stageGates):
-	# 		if source_node_list[level][idx] != -1:
-	# 			tot_rc_nodes += 1
+	tot_rc_nodes = 0
+	for level in range(len(stageModule)):
+		for idx, node in enumerate(stageModule[level].stageGates):
+			if source_node_list[level][idx] != -1:
+				tot_rc_nodes += 1
 
-	# rc_nodes_ratio = tot_rc_nodes / tot_nodes
-	# if not (rc_nodes_ratio > design.min_rc_nodes and rc_nodes_ratio < design.max_rc_nodes):
-	# 	return False, ''
+	rc_nodes_ratio = tot_rc_nodes / tot_nodes
+	if not (rc_nodes_ratio > design.min_rc_nodes and rc_nodes_ratio < design.max_rc_nodes):
+		return False, ''
 
 	###########################################
 	# Check Level Difference
@@ -510,12 +501,19 @@ def check_reconvergent(stageModule, design):
 	# if not (rc_area_ratio > design.min_rc_area and rc_area_ratio < design.max_rc_area):
 	# 	return False, ''
 
+	###########################################
+	# Check Connection
+	###########################################
+	for idx in range(1, design.no_nodes, 1):
+		if not uf.is_connected(0, idx):
+			return False, ''
+        
 	info = ''
 	info += '-----------------------------------\n'
 	info += 'Circuit Name: {}\n'.format(design.circuit_name)
 	info += 'Number of Nodes: {:}\n'.format(tot_nodes)
 	info += 'Max level : {:}, \n'.format(max_level_diff)
-	# info += 'Reconvergent nodes: {:}/{:} = {:}\n'.format(tot_rc_nodes, tot_nodes, rc_nodes_ratio)
+	info += 'Reconvergent nodes: {:}/{:} = {:}\n'.format(tot_rc_nodes, tot_nodes, rc_nodes_ratio)
 	# info += 'Reconvergent area: {:}/{:} = {:}\n'.format(len(rc_area_list), tot_nodes, rc_area_ratio)
 	info += '-----------------------------------\n'
 	info += '\n'
@@ -536,13 +534,13 @@ def dfs_rc_circuits(node_serNum, vis, dst_serNum, result, stageModule, serNum2Ma
 	return result
 
 # iterative chance solver and final normalization method:
-def iterateSolveandNormalize(stageModule, targetfile, design):
+def iterateSolveandNormalize(stageModule, targetfile, design, uf):
 	remFO = []
 	remFI = []
 	for i in range(1,design.IterationCount):
-		remFO,remFI = normalizeInterconnects(stageModule, design)
-	if not len(remFO) and not len(remFI):
-		check_res, circuit_info = check_reconvergent(stageModule, design)
+		remFO,remFI = normalizeInterconnects(stageModule, design, uf)
+	if not len(remFO) and not len(remFI) and not len(design.dis_connection):
+		check_res, circuit_info = check_reconvergent(stageModule, design, uf)
 		if not check_res:
 			return False, ''
 		print("design sucess!")
@@ -558,12 +556,12 @@ def iterateSolveandNormalize(stageModule, targetfile, design):
 		return False, ''
 		
 # deign framework : pretty much everything designed here : DAG generation mapping and allocation
-def designFramework(stageModule, targetfile, design):
+def designFramework(stageModule, targetfile, design, uf):
 	setInputOutputNodes(stageModule, design)
 	#determineInterConnects(stageModule)
-	determineInterConnectsFast(stageModule, design)
+	determineInterConnectsFast(stageModule, design, uf)
 	for i in range(0,design.mainIterate):	
-		status, circuit_info = iterateSolveandNormalize(stageModule, targetfile, design)
+		status, circuit_info = iterateSolveandNormalize(stageModule, targetfile, design, uf)
 		if status == True:
 			break
 	return circuit_info

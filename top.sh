@@ -2,7 +2,7 @@ rm ./verilog/*
 rm ./syn_verilog/*
 rm ./syn_bench/*
 
-pypy3 ./top.py
+~/opt/pypy3.7-v7.3.5-linux64/bin/pypy3 ./top.py
 yosys run.tcl
-pypy3 ./v2bench.py
+~/opt/pypy3.7-v7.3.5-linux64/bin/pypy3 ./v2bench.py
 

@@ -1,7 +1,7 @@
 from generate_dataset import *
 
-MAX_TIMES = 10
-NAME_HEAD = 'test_'
+MAX_TIMES = 2000
+NAME_HEAD = 'Depth_10_20_Nodes_300_500_S0'
 
 if __name__ == '__main__':
     # bench_folder = './bench/'

@@ -2,6 +2,7 @@ from generator import *
 import random
 import os
 from parameter import *
+from union_find import UnionFind
 
 def generate_circuit(circuit_name, filename):
     first_time = True
@@ -24,7 +25,10 @@ def generate_circuit(circuit_name, filename):
         stageModule = []
         totGates = 0
         totGates = growGraph(stageModule, design)  # grow the graph using nested lists
-        circuit_info = designFramework(stageModule, targetfile, design)
+        for idx in range(1, design.no_nodes+1, 1):
+            design.dis_connection.append(idx)
+        uf = UnionFind(design.no_nodes)
+        circuit_info = designFramework(stageModule, targetfile, design, uf)
         # print(" The total number of gates: ", totGates)
         # traverseGraph(stageModule)				 	# traverse the entire graph
         targetfile.close()

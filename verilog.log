@@ -1,60 +1,70 @@
 -----------------------------------
-Circuit Name: test_00
-Number of Nodes: 40
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S000
+Number of Nodes: 477
+Max level : 14, 
+Reconvergent nodes: 101/477 = 0.21174004192872117
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_01
-Number of Nodes: 17
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S001
+Number of Nodes: 481
+Max level : 18, 
+Reconvergent nodes: 102/481 = 0.21205821205821207
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_02
-Number of Nodes: 42
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S002
+Number of Nodes: 344
+Max level : 17, 
+Reconvergent nodes: 96/344 = 0.27906976744186046
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_03
-Number of Nodes: 38
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S003
+Number of Nodes: 344
+Max level : 17, 
+Reconvergent nodes: 72/344 = 0.20930232558139536
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_04
-Number of Nodes: 37
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S004
+Number of Nodes: 342
+Max level : 10, 
+Reconvergent nodes: 74/342 = 0.21637426900584794
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_05
-Number of Nodes: 32
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S005
+Number of Nodes: 354
+Max level : 18, 
+Reconvergent nodes: 75/354 = 0.211864406779661
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_06
-Number of Nodes: 33
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S006
+Number of Nodes: 471
+Max level : 16, 
+Reconvergent nodes: 96/471 = 0.20382165605095542
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_07
-Number of Nodes: 39
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S007
+Number of Nodes: 306
+Max level : 17, 
+Reconvergent nodes: 71/306 = 0.23202614379084968
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_08
-Number of Nodes: 24
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S008
+Number of Nodes: 378
+Max level : 14, 
+Reconvergent nodes: 84/378 = 0.2222222222222222
 -----------------------------------
 
 -----------------------------------
-Circuit Name: test_09
-Number of Nodes: 38
-Max level : 0, 
+Circuit Name: Depth_10_20_Nodes_200_400_S009
+Number of Nodes: 300
+Max level : 16, 
+Reconvergent nodes: 70/300 = 0.23333333333333334
 -----------------------------------
 
