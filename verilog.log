@@ -1,70 +1,2541 @@
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S000
-Number of Nodes: 477
-Max level : 14, 
-Reconvergent nodes: 101/477 = 0.21174004192872117
+Circuit Name: Depth_10_20_Nodes_300_500_S0_00
+Number of Nodes: 366
+Max level : 15, 
+Reconvergent nodes: 80/366 = 0.2185792349726776
 -----------------------------------
 
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S001
+Circuit Name: Depth_10_20_Nodes_300_500_S0_01
+Number of Nodes: 330
+Max level : 19, 
+Reconvergent nodes: 87/330 = 0.2636363636363636
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_02
+Number of Nodes: 300
+Max level : 19, 
+Reconvergent nodes: 66/300 = 0.22
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_03
+Number of Nodes: 427
+Max level : 14, 
+Reconvergent nodes: 98/427 = 0.22950819672131148
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_04
+Number of Nodes: 415
+Max level : 16, 
+Reconvergent nodes: 92/415 = 0.2216867469879518
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_05
+Number of Nodes: 359
+Max level : 15, 
+Reconvergent nodes: 87/359 = 0.24233983286908078
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_06
+Number of Nodes: 476
+Max level : 18, 
+Reconvergent nodes: 96/476 = 0.20168067226890757
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_07
+Number of Nodes: 331
+Max level : 14, 
+Reconvergent nodes: 90/331 = 0.2719033232628399
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_08
+Number of Nodes: 415
+Max level : 19, 
+Reconvergent nodes: 104/415 = 0.25060240963855424
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_09
+Number of Nodes: 329
+Max level : 16, 
+Reconvergent nodes: 70/329 = 0.2127659574468085
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_10
+Number of Nodes: 369
+Max level : 11, 
+Reconvergent nodes: 78/369 = 0.21138211382113822
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_11
+Number of Nodes: 464
+Max level : 18, 
+Reconvergent nodes: 94/464 = 0.2025862068965517
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_12
+Number of Nodes: 438
+Max level : 17, 
+Reconvergent nodes: 91/438 = 0.20776255707762556
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_13
+Number of Nodes: 388
+Max level : 14, 
+Reconvergent nodes: 79/388 = 0.2036082474226804
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_14
+Number of Nodes: 313
+Max level : 15, 
+Reconvergent nodes: 66/313 = 0.2108626198083067
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_15
+Number of Nodes: 325
+Max level : 14, 
+Reconvergent nodes: 67/325 = 0.20615384615384616
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_16
+Number of Nodes: 422
+Max level : 16, 
+Reconvergent nodes: 89/422 = 0.2109004739336493
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_17
+Number of Nodes: 457
+Max level : 17, 
+Reconvergent nodes: 121/457 = 0.2647702407002188
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_18
+Number of Nodes: 304
+Max level : 16, 
+Reconvergent nodes: 67/304 = 0.22039473684210525
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_19
+Number of Nodes: 375
+Max level : 18, 
+Reconvergent nodes: 90/375 = 0.24
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_20
+Number of Nodes: 305
+Max level : 17, 
+Reconvergent nodes: 73/305 = 0.23934426229508196
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_21
+Number of Nodes: 434
+Max level : 16, 
+Reconvergent nodes: 88/434 = 0.20276497695852536
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_22
+Number of Nodes: 499
+Max level : 14, 
+Reconvergent nodes: 102/499 = 0.20440881763527055
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_23
+Number of Nodes: 339
+Max level : 18, 
+Reconvergent nodes: 80/339 = 0.2359882005899705
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_24
+Number of Nodes: 400
+Max level : 17, 
+Reconvergent nodes: 97/400 = 0.2425
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_25
+Number of Nodes: 380
+Max level : 11, 
+Reconvergent nodes: 78/380 = 0.20526315789473684
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_26
+Number of Nodes: 490
+Max level : 16, 
+Reconvergent nodes: 119/490 = 0.24285714285714285
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_27
+Number of Nodes: 363
+Max level : 18, 
+Reconvergent nodes: 77/363 = 0.21212121212121213
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_28
+Number of Nodes: 401
+Max level : 19, 
+Reconvergent nodes: 110/401 = 0.2743142144638404
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_29
+Number of Nodes: 454
+Max level : 16, 
+Reconvergent nodes: 93/454 = 0.20484581497797358
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_30
 Number of Nodes: 481
 Max level : 18, 
-Reconvergent nodes: 102/481 = 0.21205821205821207
+Reconvergent nodes: 109/481 = 0.22661122661122662
 -----------------------------------
 
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S002
-Number of Nodes: 344
-Max level : 17, 
-Reconvergent nodes: 96/344 = 0.27906976744186046
------------------------------------
-
------------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S003
-Number of Nodes: 344
-Max level : 17, 
-Reconvergent nodes: 72/344 = 0.20930232558139536
------------------------------------
-
------------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S004
-Number of Nodes: 342
-Max level : 10, 
-Reconvergent nodes: 74/342 = 0.21637426900584794
------------------------------------
-
------------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S005
-Number of Nodes: 354
+Circuit Name: Depth_10_20_Nodes_300_500_S0_31
+Number of Nodes: 455
 Max level : 18, 
-Reconvergent nodes: 75/354 = 0.211864406779661
+Reconvergent nodes: 119/455 = 0.26153846153846155
 -----------------------------------
 
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S006
-Number of Nodes: 471
-Max level : 16, 
-Reconvergent nodes: 96/471 = 0.20382165605095542
------------------------------------
-
------------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S007
-Number of Nodes: 306
+Circuit Name: Depth_10_20_Nodes_300_500_S0_32
+Number of Nodes: 474
 Max level : 17, 
-Reconvergent nodes: 71/306 = 0.23202614379084968
+Reconvergent nodes: 102/474 = 0.21518987341772153
 -----------------------------------
 
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S008
-Number of Nodes: 378
+Circuit Name: Depth_10_20_Nodes_300_500_S0_33
+Number of Nodes: 468
+Max level : 18, 
+Reconvergent nodes: 123/468 = 0.26282051282051283
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_34
+Number of Nodes: 353
+Max level : 11, 
+Reconvergent nodes: 78/353 = 0.22096317280453256
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_35
+Number of Nodes: 362
+Max level : 19, 
+Reconvergent nodes: 103/362 = 0.2845303867403315
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_36
+Number of Nodes: 332
+Max level : 18, 
+Reconvergent nodes: 77/332 = 0.2319277108433735
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_37
+Number of Nodes: 478
+Max level : 13, 
+Reconvergent nodes: 106/478 = 0.2217573221757322
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_38
+Number of Nodes: 343
+Max level : 17, 
+Reconvergent nodes: 86/343 = 0.25072886297376096
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_39
+Number of Nodes: 368
+Max level : 18, 
+Reconvergent nodes: 95/368 = 0.25815217391304346
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_40
+Number of Nodes: 483
+Max level : 13, 
+Reconvergent nodes: 110/483 = 0.2277432712215321
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_41
+Number of Nodes: 341
+Max level : 15, 
+Reconvergent nodes: 86/341 = 0.25219941348973607
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_42
+Number of Nodes: 475
+Max level : 18, 
+Reconvergent nodes: 113/475 = 0.23789473684210527
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_43
+Number of Nodes: 384
+Max level : 15, 
+Reconvergent nodes: 103/384 = 0.2682291666666667
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_44
+Number of Nodes: 437
+Max level : 18, 
+Reconvergent nodes: 121/437 = 0.2768878718535469
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_45
+Number of Nodes: 459
+Max level : 18, 
+Reconvergent nodes: 94/459 = 0.2047930283224401
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_46
+Number of Nodes: 436
+Max level : 17, 
+Reconvergent nodes: 99/436 = 0.22706422018348624
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_47
+Number of Nodes: 459
+Max level : 18, 
+Reconvergent nodes: 112/459 = 0.2440087145969499
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_48
+Number of Nodes: 439
+Max level : 11, 
+Reconvergent nodes: 91/439 = 0.2072892938496583
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_49
+Number of Nodes: 477
+Max level : 18, 
+Reconvergent nodes: 110/477 = 0.23060796645702306
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_50
+Number of Nodes: 447
+Max level : 17, 
+Reconvergent nodes: 99/447 = 0.2214765100671141
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_51
+Number of Nodes: 322
+Max level : 19, 
+Reconvergent nodes: 74/322 = 0.22981366459627328
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_52
+Number of Nodes: 459
+Max level : 19, 
+Reconvergent nodes: 96/459 = 0.20915032679738563
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_53
+Number of Nodes: 311
+Max level : 12, 
+Reconvergent nodes: 76/311 = 0.24437299035369775
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_54
+Number of Nodes: 357
+Max level : 19, 
+Reconvergent nodes: 86/357 = 0.24089635854341737
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_55
+Number of Nodes: 441
+Max level : 17, 
+Reconvergent nodes: 89/441 = 0.2018140589569161
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_56
+Number of Nodes: 351
+Max level : 12, 
+Reconvergent nodes: 82/351 = 0.2336182336182336
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_57
+Number of Nodes: 425
+Max level : 15, 
+Reconvergent nodes: 114/425 = 0.26823529411764707
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_58
+Number of Nodes: 492
+Max level : 19, 
+Reconvergent nodes: 104/492 = 0.21138211382113822
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_59
+Number of Nodes: 393
+Max level : 18, 
+Reconvergent nodes: 92/393 = 0.2340966921119593
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_60
+Number of Nodes: 419
+Max level : 19, 
+Reconvergent nodes: 84/419 = 0.20047732696897375
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_61
+Number of Nodes: 317
+Max level : 18, 
+Reconvergent nodes: 81/317 = 0.2555205047318612
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_62
+Number of Nodes: 355
+Max level : 15, 
+Reconvergent nodes: 85/355 = 0.23943661971830985
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_63
+Number of Nodes: 491
+Max level : 15, 
+Reconvergent nodes: 101/491 = 0.20570264765784113
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_64
+Number of Nodes: 343
+Max level : 17, 
+Reconvergent nodes: 91/343 = 0.2653061224489796
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_65
+Number of Nodes: 361
 Max level : 14, 
-Reconvergent nodes: 84/378 = 0.2222222222222222
+Reconvergent nodes: 85/361 = 0.23545706371191136
 -----------------------------------
 
 -----------------------------------
-Circuit Name: Depth_10_20_Nodes_200_400_S009
+Circuit Name: Depth_10_20_Nodes_300_500_S0_66
+Number of Nodes: 403
+Max level : 18, 
+Reconvergent nodes: 82/403 = 0.20347394540942929
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_67
+Number of Nodes: 348
+Max level : 18, 
+Reconvergent nodes: 76/348 = 0.21839080459770116
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_68
+Number of Nodes: 404
+Max level : 16, 
+Reconvergent nodes: 88/404 = 0.21782178217821782
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_69
+Number of Nodes: 336
+Max level : 18, 
+Reconvergent nodes: 77/336 = 0.22916666666666666
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_70
+Number of Nodes: 447
+Max level : 18, 
+Reconvergent nodes: 105/447 = 0.2348993288590604
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_71
+Number of Nodes: 361
+Max level : 13, 
+Reconvergent nodes: 75/361 = 0.2077562326869806
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_72
+Number of Nodes: 355
+Max level : 18, 
+Reconvergent nodes: 82/355 = 0.23098591549295774
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_73
+Number of Nodes: 337
+Max level : 17, 
+Reconvergent nodes: 88/337 = 0.26112759643916916
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_74
+Number of Nodes: 309
+Max level : 18, 
+Reconvergent nodes: 90/309 = 0.2912621359223301
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_75
+Number of Nodes: 325
+Max level : 18, 
+Reconvergent nodes: 87/325 = 0.2676923076923077
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_76
+Number of Nodes: 356
+Max level : 12, 
+Reconvergent nodes: 74/356 = 0.20786516853932585
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_77
+Number of Nodes: 372
+Max level : 18, 
+Reconvergent nodes: 97/372 = 0.260752688172043
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_78
+Number of Nodes: 468
+Max level : 19, 
+Reconvergent nodes: 118/468 = 0.25213675213675213
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_79
+Number of Nodes: 463
+Max level : 18, 
+Reconvergent nodes: 130/463 = 0.28077753779697623
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_80
+Number of Nodes: 409
+Max level : 16, 
+Reconvergent nodes: 84/409 = 0.20537897310513448
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_81
+Number of Nodes: 329
+Max level : 14, 
+Reconvergent nodes: 101/329 = 0.3069908814589666
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_82
+Number of Nodes: 352
+Max level : 15, 
+Reconvergent nodes: 79/352 = 0.22443181818181818
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_83
+Number of Nodes: 311
+Max level : 15, 
+Reconvergent nodes: 64/311 = 0.2057877813504823
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_84
+Number of Nodes: 446
+Max level : 18, 
+Reconvergent nodes: 95/446 = 0.21300448430493274
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_85
+Number of Nodes: 399
+Max level : 18, 
+Reconvergent nodes: 89/399 = 0.22305764411027568
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_86
+Number of Nodes: 493
+Max level : 13, 
+Reconvergent nodes: 101/493 = 0.20486815415821502
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_87
+Number of Nodes: 432
+Max level : 18, 
+Reconvergent nodes: 92/432 = 0.21296296296296297
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_88
+Number of Nodes: 445
+Max level : 19, 
+Reconvergent nodes: 109/445 = 0.2449438202247191
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_89
+Number of Nodes: 393
+Max level : 17, 
+Reconvergent nodes: 94/393 = 0.23918575063613232
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_90
+Number of Nodes: 323
+Max level : 18, 
+Reconvergent nodes: 66/323 = 0.2043343653250774
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_91
+Number of Nodes: 339
+Max level : 16, 
+Reconvergent nodes: 76/339 = 0.22418879056047197
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_92
+Number of Nodes: 344
+Max level : 14, 
+Reconvergent nodes: 70/344 = 0.20348837209302326
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_93
+Number of Nodes: 341
+Max level : 18, 
+Reconvergent nodes: 91/341 = 0.2668621700879765
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_94
+Number of Nodes: 331
+Max level : 19, 
+Reconvergent nodes: 96/331 = 0.29003021148036257
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_95
+Number of Nodes: 302
+Max level : 19, 
+Reconvergent nodes: 72/302 = 0.23841059602649006
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_96
+Number of Nodes: 418
+Max level : 16, 
+Reconvergent nodes: 87/418 = 0.20813397129186603
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_97
+Number of Nodes: 415
+Max level : 18, 
+Reconvergent nodes: 90/415 = 0.21686746987951808
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_98
+Number of Nodes: 356
+Max level : 16, 
+Reconvergent nodes: 72/356 = 0.20224719101123595
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_99
+Number of Nodes: 386
+Max level : 14, 
+Reconvergent nodes: 82/386 = 0.21243523316062177
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_100
+Number of Nodes: 333
+Max level : 16, 
+Reconvergent nodes: 95/333 = 0.2852852852852853
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_101
+Number of Nodes: 362
+Max level : 13, 
+Reconvergent nodes: 85/362 = 0.23480662983425415
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_102
+Number of Nodes: 305
+Max level : 13, 
+Reconvergent nodes: 78/305 = 0.25573770491803277
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_103
+Number of Nodes: 406
+Max level : 19, 
+Reconvergent nodes: 105/406 = 0.25862068965517243
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_104
+Number of Nodes: 407
+Max level : 19, 
+Reconvergent nodes: 86/407 = 0.2113022113022113
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_105
+Number of Nodes: 480
+Max level : 15, 
+Reconvergent nodes: 101/480 = 0.21041666666666667
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_106
+Number of Nodes: 497
+Max level : 15, 
+Reconvergent nodes: 100/497 = 0.2012072434607646
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_107
+Number of Nodes: 467
+Max level : 18, 
+Reconvergent nodes: 97/467 = 0.20770877944325483
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_108
+Number of Nodes: 315
+Max level : 18, 
+Reconvergent nodes: 83/315 = 0.2634920634920635
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_109
+Number of Nodes: 355
+Max level : 19, 
+Reconvergent nodes: 73/355 = 0.2056338028169014
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_110
+Number of Nodes: 444
+Max level : 19, 
+Reconvergent nodes: 95/444 = 0.21396396396396397
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_111
+Number of Nodes: 358
+Max level : 17, 
+Reconvergent nodes: 72/358 = 0.2011173184357542
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_112
+Number of Nodes: 400
+Max level : 18, 
+Reconvergent nodes: 115/400 = 0.2875
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_113
+Number of Nodes: 376
+Max level : 19, 
+Reconvergent nodes: 108/376 = 0.2872340425531915
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_114
+Number of Nodes: 344
+Max level : 14, 
+Reconvergent nodes: 69/344 = 0.2005813953488372
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_115
+Number of Nodes: 323
+Max level : 19, 
+Reconvergent nodes: 80/323 = 0.2476780185758514
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_116
+Number of Nodes: 400
+Max level : 18, 
+Reconvergent nodes: 81/400 = 0.2025
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_117
+Number of Nodes: 359
+Max level : 16, 
+Reconvergent nodes: 96/359 = 0.26740947075208915
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_118
+Number of Nodes: 486
+Max level : 17, 
+Reconvergent nodes: 137/486 = 0.28189300411522633
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_119
+Number of Nodes: 328
+Max level : 15, 
+Reconvergent nodes: 70/328 = 0.21341463414634146
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_120
+Number of Nodes: 369
+Max level : 14, 
+Reconvergent nodes: 74/369 = 0.2005420054200542
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_121
+Number of Nodes: 379
+Max level : 13, 
+Reconvergent nodes: 86/379 = 0.22691292875989447
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_122
+Number of Nodes: 405
+Max level : 15, 
+Reconvergent nodes: 85/405 = 0.20987654320987653
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_123
+Number of Nodes: 339
+Max level : 12, 
+Reconvergent nodes: 75/339 = 0.22123893805309736
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_124
+Number of Nodes: 313
+Max level : 17, 
+Reconvergent nodes: 92/313 = 0.2939297124600639
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_125
+Number of Nodes: 433
+Max level : 18, 
+Reconvergent nodes: 87/433 = 0.20092378752886836
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_126
+Number of Nodes: 325
+Max level : 17, 
+Reconvergent nodes: 73/325 = 0.2246153846153846
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_127
+Number of Nodes: 391
+Max level : 18, 
+Reconvergent nodes: 112/391 = 0.2864450127877238
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_128
+Number of Nodes: 319
+Max level : 16, 
+Reconvergent nodes: 83/319 = 0.2601880877742947
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_129
+Number of Nodes: 438
+Max level : 15, 
+Reconvergent nodes: 93/438 = 0.21232876712328766
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_130
+Number of Nodes: 400
+Max level : 18, 
+Reconvergent nodes: 85/400 = 0.2125
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_131
+Number of Nodes: 401
+Max level : 17, 
+Reconvergent nodes: 82/401 = 0.20448877805486285
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_132
+Number of Nodes: 353
+Max level : 16, 
+Reconvergent nodes: 71/353 = 0.20113314447592068
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_133
+Number of Nodes: 499
+Max level : 19, 
+Reconvergent nodes: 122/499 = 0.24448897795591182
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_134
+Number of Nodes: 363
+Max level : 18, 
+Reconvergent nodes: 90/363 = 0.24793388429752067
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_135
+Number of Nodes: 312
+Max level : 14, 
+Reconvergent nodes: 75/312 = 0.2403846153846154
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_136
+Number of Nodes: 334
+Max level : 14, 
+Reconvergent nodes: 68/334 = 0.20359281437125748
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_137
+Number of Nodes: 405
+Max level : 12, 
+Reconvergent nodes: 90/405 = 0.2222222222222222
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_138
+Number of Nodes: 408
+Max level : 17, 
+Reconvergent nodes: 83/408 = 0.2034313725490196
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_139
+Number of Nodes: 470
+Max level : 15, 
+Reconvergent nodes: 116/470 = 0.24680851063829787
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_140
+Number of Nodes: 323
+Max level : 15, 
+Reconvergent nodes: 82/323 = 0.25386996904024767
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_141
+Number of Nodes: 315
+Max level : 15, 
+Reconvergent nodes: 71/315 = 0.2253968253968254
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_142
+Number of Nodes: 335
+Max level : 14, 
+Reconvergent nodes: 80/335 = 0.23880597014925373
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_143
+Number of Nodes: 445
+Max level : 17, 
+Reconvergent nodes: 92/445 = 0.20674157303370785
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_144
+Number of Nodes: 374
+Max level : 19, 
+Reconvergent nodes: 83/374 = 0.22192513368983957
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_145
+Number of Nodes: 491
+Max level : 17, 
+Reconvergent nodes: 110/491 = 0.2240325865580448
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_146
+Number of Nodes: 471
+Max level : 17, 
+Reconvergent nodes: 111/471 = 0.2356687898089172
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_147
+Number of Nodes: 394
+Max level : 19, 
+Reconvergent nodes: 104/394 = 0.2639593908629442
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_148
+Number of Nodes: 418
+Max level : 19, 
+Reconvergent nodes: 87/418 = 0.20813397129186603
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_149
+Number of Nodes: 428
+Max level : 16, 
+Reconvergent nodes: 101/428 = 0.23598130841121495
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_150
+Number of Nodes: 311
+Max level : 14, 
+Reconvergent nodes: 73/311 = 0.2347266881028939
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_151
+Number of Nodes: 371
+Max level : 16, 
+Reconvergent nodes: 107/371 = 0.2884097035040431
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_152
+Number of Nodes: 355
+Max level : 16, 
+Reconvergent nodes: 85/355 = 0.23943661971830985
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_153
+Number of Nodes: 406
+Max level : 17, 
+Reconvergent nodes: 106/406 = 0.26108374384236455
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_154
+Number of Nodes: 361
+Max level : 17, 
+Reconvergent nodes: 103/361 = 0.2853185595567867
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_155
+Number of Nodes: 405
+Max level : 19, 
+Reconvergent nodes: 99/405 = 0.24444444444444444
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_156
+Number of Nodes: 402
+Max level : 12, 
+Reconvergent nodes: 87/402 = 0.21641791044776118
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_157
+Number of Nodes: 430
+Max level : 18, 
+Reconvergent nodes: 99/430 = 0.2302325581395349
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_158
+Number of Nodes: 405
+Max level : 17, 
+Reconvergent nodes: 85/405 = 0.20987654320987653
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_159
+Number of Nodes: 332
+Max level : 18, 
+Reconvergent nodes: 75/332 = 0.22590361445783133
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_160
+Number of Nodes: 385
+Max level : 16, 
+Reconvergent nodes: 85/385 = 0.22077922077922077
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_161
+Number of Nodes: 318
+Max level : 16, 
+Reconvergent nodes: 70/318 = 0.22012578616352202
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_162
+Number of Nodes: 328
+Max level : 13, 
+Reconvergent nodes: 86/328 = 0.2621951219512195
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_163
+Number of Nodes: 378
+Max level : 18, 
+Reconvergent nodes: 97/378 = 0.2566137566137566
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_164
+Number of Nodes: 417
+Max level : 18, 
+Reconvergent nodes: 85/417 = 0.2038369304556355
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_165
+Number of Nodes: 488
+Max level : 16, 
+Reconvergent nodes: 98/488 = 0.20081967213114754
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_166
+Number of Nodes: 397
+Max level : 16, 
+Reconvergent nodes: 90/397 = 0.22670025188916876
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_167
+Number of Nodes: 305
+Max level : 13, 
+Reconvergent nodes: 64/305 = 0.2098360655737705
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_168
+Number of Nodes: 490
+Max level : 17, 
+Reconvergent nodes: 101/490 = 0.20612244897959184
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_169
+Number of Nodes: 311
+Max level : 13, 
+Reconvergent nodes: 66/311 = 0.21221864951768488
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_170
+Number of Nodes: 486
+Max level : 18, 
+Reconvergent nodes: 106/486 = 0.21810699588477367
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_171
+Number of Nodes: 369
+Max level : 16, 
+Reconvergent nodes: 87/369 = 0.23577235772357724
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_172
+Number of Nodes: 308
+Max level : 17, 
+Reconvergent nodes: 83/308 = 0.2694805194805195
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_173
+Number of Nodes: 336
+Max level : 19, 
+Reconvergent nodes: 69/336 = 0.20535714285714285
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_174
+Number of Nodes: 352
+Max level : 16, 
+Reconvergent nodes: 80/352 = 0.22727272727272727
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_175
+Number of Nodes: 353
+Max level : 13, 
+Reconvergent nodes: 80/353 = 0.22662889518413598
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_176
+Number of Nodes: 465
+Max level : 14, 
+Reconvergent nodes: 112/465 = 0.24086021505376345
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_177
+Number of Nodes: 448
+Max level : 12, 
+Reconvergent nodes: 109/448 = 0.24330357142857142
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_178
+Number of Nodes: 461
+Max level : 10, 
+Reconvergent nodes: 98/461 = 0.21258134490238612
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_179
+Number of Nodes: 354
+Max level : 14, 
+Reconvergent nodes: 73/354 = 0.2062146892655367
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_180
+Number of Nodes: 432
+Max level : 16, 
+Reconvergent nodes: 92/432 = 0.21296296296296297
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_181
+Number of Nodes: 303
+Max level : 17, 
+Reconvergent nodes: 65/303 = 0.2145214521452145
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_182
+Number of Nodes: 349
+Max level : 18, 
+Reconvergent nodes: 81/349 = 0.23209169054441262
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_183
+Number of Nodes: 394
+Max level : 19, 
+Reconvergent nodes: 112/394 = 0.28426395939086296
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_184
+Number of Nodes: 356
+Max level : 19, 
+Reconvergent nodes: 99/356 = 0.27808988764044945
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_185
+Number of Nodes: 358
+Max level : 14, 
+Reconvergent nodes: 90/358 = 0.25139664804469275
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_186
+Number of Nodes: 309
+Max level : 16, 
+Reconvergent nodes: 92/309 = 0.2977346278317152
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_187
+Number of Nodes: 305
+Max level : 17, 
+Reconvergent nodes: 77/305 = 0.25245901639344265
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_188
+Number of Nodes: 489
+Max level : 18, 
+Reconvergent nodes: 99/489 = 0.20245398773006135
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_189
+Number of Nodes: 420
+Max level : 14, 
+Reconvergent nodes: 104/420 = 0.24761904761904763
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_190
+Number of Nodes: 328
+Max level : 16, 
+Reconvergent nodes: 73/328 = 0.2225609756097561
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_191
+Number of Nodes: 341
+Max level : 17, 
+Reconvergent nodes: 82/341 = 0.2404692082111437
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_192
+Number of Nodes: 341
+Max level : 17, 
+Reconvergent nodes: 77/341 = 0.22580645161290322
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_193
+Number of Nodes: 440
+Max level : 18, 
+Reconvergent nodes: 119/440 = 0.27045454545454545
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_194
+Number of Nodes: 376
+Max level : 15, 
+Reconvergent nodes: 80/376 = 0.2127659574468085
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_195
+Number of Nodes: 320
+Max level : 19, 
+Reconvergent nodes: 68/320 = 0.2125
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_196
+Number of Nodes: 340
+Max level : 18, 
+Reconvergent nodes: 97/340 = 0.2852941176470588
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_197
+Number of Nodes: 341
+Max level : 15, 
+Reconvergent nodes: 71/341 = 0.20821114369501467
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_198
+Number of Nodes: 395
+Max level : 17, 
+Reconvergent nodes: 111/395 = 0.2810126582278481
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_199
+Number of Nodes: 383
+Max level : 16, 
+Reconvergent nodes: 82/383 = 0.21409921671018275
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_200
+Number of Nodes: 342
+Max level : 15, 
+Reconvergent nodes: 78/342 = 0.22807017543859648
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_201
+Number of Nodes: 408
+Max level : 16, 
+Reconvergent nodes: 98/408 = 0.24019607843137256
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_202
+Number of Nodes: 406
+Max level : 16, 
+Reconvergent nodes: 98/406 = 0.2413793103448276
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_203
+Number of Nodes: 447
+Max level : 18, 
+Reconvergent nodes: 91/447 = 0.203579418344519
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_204
+Number of Nodes: 306
+Max level : 12, 
+Reconvergent nodes: 69/306 = 0.22549019607843138
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_205
+Number of Nodes: 436
+Max level : 18, 
+Reconvergent nodes: 103/436 = 0.23623853211009174
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_206
+Number of Nodes: 378
+Max level : 16, 
+Reconvergent nodes: 76/378 = 0.20105820105820105
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_207
+Number of Nodes: 499
+Max level : 15, 
+Reconvergent nodes: 123/499 = 0.24649298597194388
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_208
+Number of Nodes: 474
+Max level : 17, 
+Reconvergent nodes: 109/474 = 0.229957805907173
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_209
+Number of Nodes: 311
+Max level : 18, 
+Reconvergent nodes: 86/311 = 0.2765273311897106
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_210
+Number of Nodes: 395
+Max level : 19, 
+Reconvergent nodes: 88/395 = 0.22278481012658227
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_211
+Number of Nodes: 489
+Max level : 17, 
+Reconvergent nodes: 98/489 = 0.20040899795501022
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_212
+Number of Nodes: 332
+Max level : 16, 
+Reconvergent nodes: 86/332 = 0.25903614457831325
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_213
+Number of Nodes: 305
+Max level : 18, 
+Reconvergent nodes: 71/305 = 0.23278688524590163
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_214
+Number of Nodes: 463
+Max level : 18, 
+Reconvergent nodes: 108/463 = 0.23326133909287258
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_215
+Number of Nodes: 307
+Max level : 17, 
+Reconvergent nodes: 66/307 = 0.21498371335504887
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_216
+Number of Nodes: 438
+Max level : 12, 
+Reconvergent nodes: 90/438 = 0.2054794520547945
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_217
+Number of Nodes: 314
+Max level : 12, 
+Reconvergent nodes: 69/314 = 0.2197452229299363
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_218
+Number of Nodes: 404
+Max level : 19, 
+Reconvergent nodes: 91/404 = 0.22524752475247525
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_219
+Number of Nodes: 317
+Max level : 17, 
+Reconvergent nodes: 78/317 = 0.24605678233438485
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_220
+Number of Nodes: 499
+Max level : 16, 
+Reconvergent nodes: 105/499 = 0.21042084168336672
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_221
+Number of Nodes: 350
+Max level : 16, 
+Reconvergent nodes: 79/350 = 0.2257142857142857
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_222
+Number of Nodes: 338
+Max level : 17, 
+Reconvergent nodes: 71/338 = 0.21005917159763313
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_223
+Number of Nodes: 303
+Max level : 15, 
+Reconvergent nodes: 67/303 = 0.22112211221122113
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_224
+Number of Nodes: 478
+Max level : 19, 
+Reconvergent nodes: 97/478 = 0.20292887029288703
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_225
+Number of Nodes: 419
+Max level : 19, 
+Reconvergent nodes: 96/419 = 0.22911694510739858
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_226
+Number of Nodes: 323
+Max level : 13, 
+Reconvergent nodes: 66/323 = 0.2043343653250774
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_227
+Number of Nodes: 345
+Max level : 15, 
+Reconvergent nodes: 71/345 = 0.20579710144927535
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_228
+Number of Nodes: 462
+Max level : 17, 
+Reconvergent nodes: 119/462 = 0.25757575757575757
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_229
+Number of Nodes: 300
+Max level : 18, 
+Reconvergent nodes: 85/300 = 0.2833333333333333
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_230
+Number of Nodes: 346
+Max level : 16, 
+Reconvergent nodes: 96/346 = 0.2774566473988439
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_231
+Number of Nodes: 340
+Max level : 13, 
+Reconvergent nodes: 82/340 = 0.2411764705882353
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_232
+Number of Nodes: 476
+Max level : 19, 
+Reconvergent nodes: 111/476 = 0.23319327731092437
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_233
+Number of Nodes: 382
+Max level : 17, 
+Reconvergent nodes: 92/382 = 0.24083769633507854
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_234
+Number of Nodes: 311
+Max level : 16, 
+Reconvergent nodes: 66/311 = 0.21221864951768488
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_235
+Number of Nodes: 462
+Max level : 16, 
+Reconvergent nodes: 94/462 = 0.20346320346320346
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_236
 Number of Nodes: 300
 Max level : 16, 
-Reconvergent nodes: 70/300 = 0.23333333333333334
+Reconvergent nodes: 74/300 = 0.24666666666666667
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_237
+Number of Nodes: 300
+Max level : 17, 
+Reconvergent nodes: 63/300 = 0.21
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_238
+Number of Nodes: 471
+Max level : 18, 
+Reconvergent nodes: 97/471 = 0.2059447983014862
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_239
+Number of Nodes: 481
+Max level : 19, 
+Reconvergent nodes: 100/481 = 0.2079002079002079
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_240
+Number of Nodes: 496
+Max level : 16, 
+Reconvergent nodes: 107/496 = 0.2157258064516129
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_241
+Number of Nodes: 323
+Max level : 17, 
+Reconvergent nodes: 74/323 = 0.22910216718266255
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_242
+Number of Nodes: 317
+Max level : 15, 
+Reconvergent nodes: 84/317 = 0.26498422712933756
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_243
+Number of Nodes: 414
+Max level : 15, 
+Reconvergent nodes: 88/414 = 0.21256038647342995
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_244
+Number of Nodes: 440
+Max level : 10, 
+Reconvergent nodes: 91/440 = 0.20681818181818182
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_245
+Number of Nodes: 322
+Max level : 17, 
+Reconvergent nodes: 66/322 = 0.20496894409937888
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_246
+Number of Nodes: 402
+Max level : 16, 
+Reconvergent nodes: 81/402 = 0.20149253731343283
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_247
+Number of Nodes: 439
+Max level : 13, 
+Reconvergent nodes: 100/439 = 0.22779043280182232
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_248
+Number of Nodes: 354
+Max level : 19, 
+Reconvergent nodes: 85/354 = 0.2401129943502825
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_249
+Number of Nodes: 405
+Max level : 15, 
+Reconvergent nodes: 103/405 = 0.254320987654321
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_250
+Number of Nodes: 402
+Max level : 18, 
+Reconvergent nodes: 95/402 = 0.236318407960199
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_251
+Number of Nodes: 366
+Max level : 17, 
+Reconvergent nodes: 90/366 = 0.2459016393442623
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_252
+Number of Nodes: 358
+Max level : 18, 
+Reconvergent nodes: 79/358 = 0.2206703910614525
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_253
+Number of Nodes: 353
+Max level : 18, 
+Reconvergent nodes: 79/353 = 0.2237960339943343
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_254
+Number of Nodes: 410
+Max level : 15, 
+Reconvergent nodes: 91/410 = 0.22195121951219512
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_255
+Number of Nodes: 304
+Max level : 14, 
+Reconvergent nodes: 65/304 = 0.2138157894736842
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_256
+Number of Nodes: 469
+Max level : 10, 
+Reconvergent nodes: 115/469 = 0.24520255863539445
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_257
+Number of Nodes: 315
+Max level : 14, 
+Reconvergent nodes: 67/315 = 0.2126984126984127
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_258
+Number of Nodes: 358
+Max level : 13, 
+Reconvergent nodes: 79/358 = 0.2206703910614525
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_259
+Number of Nodes: 476
+Max level : 14, 
+Reconvergent nodes: 96/476 = 0.20168067226890757
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_260
+Number of Nodes: 474
+Max level : 16, 
+Reconvergent nodes: 96/474 = 0.20253164556962025
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_261
+Number of Nodes: 428
+Max level : 12, 
+Reconvergent nodes: 89/428 = 0.20794392523364486
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_262
+Number of Nodes: 441
+Max level : 17, 
+Reconvergent nodes: 101/441 = 0.2290249433106576
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_263
+Number of Nodes: 355
+Max level : 15, 
+Reconvergent nodes: 92/355 = 0.2591549295774648
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_264
+Number of Nodes: 427
+Max level : 16, 
+Reconvergent nodes: 121/427 = 0.28337236533957844
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_265
+Number of Nodes: 335
+Max level : 16, 
+Reconvergent nodes: 69/335 = 0.20597014925373133
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_266
+Number of Nodes: 314
+Max level : 15, 
+Reconvergent nodes: 73/314 = 0.23248407643312102
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_267
+Number of Nodes: 412
+Max level : 17, 
+Reconvergent nodes: 85/412 = 0.20631067961165048
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_268
+Number of Nodes: 378
+Max level : 19, 
+Reconvergent nodes: 96/378 = 0.25396825396825395
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_269
+Number of Nodes: 361
+Max level : 10, 
+Reconvergent nodes: 75/361 = 0.2077562326869806
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_270
+Number of Nodes: 362
+Max level : 15, 
+Reconvergent nodes: 82/362 = 0.2265193370165746
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_271
+Number of Nodes: 329
+Max level : 19, 
+Reconvergent nodes: 90/329 = 0.2735562310030395
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_272
+Number of Nodes: 365
+Max level : 19, 
+Reconvergent nodes: 101/365 = 0.27671232876712326
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_273
+Number of Nodes: 369
+Max level : 19, 
+Reconvergent nodes: 79/369 = 0.2140921409214092
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_274
+Number of Nodes: 335
+Max level : 19, 
+Reconvergent nodes: 70/335 = 0.208955223880597
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_275
+Number of Nodes: 315
+Max level : 15, 
+Reconvergent nodes: 72/315 = 0.22857142857142856
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_276
+Number of Nodes: 483
+Max level : 19, 
+Reconvergent nodes: 137/483 = 0.2836438923395445
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_277
+Number of Nodes: 346
+Max level : 18, 
+Reconvergent nodes: 73/346 = 0.21098265895953758
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_278
+Number of Nodes: 465
+Max level : 17, 
+Reconvergent nodes: 97/465 = 0.2086021505376344
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_279
+Number of Nodes: 356
+Max level : 17, 
+Reconvergent nodes: 94/356 = 0.2640449438202247
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_280
+Number of Nodes: 408
+Max level : 15, 
+Reconvergent nodes: 98/408 = 0.24019607843137256
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_281
+Number of Nodes: 312
+Max level : 15, 
+Reconvergent nodes: 66/312 = 0.21153846153846154
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_282
+Number of Nodes: 335
+Max level : 19, 
+Reconvergent nodes: 69/335 = 0.20597014925373133
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_283
+Number of Nodes: 301
+Max level : 18, 
+Reconvergent nodes: 62/301 = 0.2059800664451827
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_284
+Number of Nodes: 340
+Max level : 13, 
+Reconvergent nodes: 70/340 = 0.20588235294117646
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_285
+Number of Nodes: 496
+Max level : 18, 
+Reconvergent nodes: 101/496 = 0.20362903225806453
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_286
+Number of Nodes: 372
+Max level : 15, 
+Reconvergent nodes: 85/372 = 0.22849462365591397
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_287
+Number of Nodes: 369
+Max level : 17, 
+Reconvergent nodes: 88/369 = 0.23848238482384823
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_288
+Number of Nodes: 407
+Max level : 19, 
+Reconvergent nodes: 93/407 = 0.2285012285012285
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_289
+Number of Nodes: 382
+Max level : 18, 
+Reconvergent nodes: 108/382 = 0.28272251308900526
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_290
+Number of Nodes: 479
+Max level : 14, 
+Reconvergent nodes: 101/479 = 0.21085594989561587
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_291
+Number of Nodes: 397
+Max level : 16, 
+Reconvergent nodes: 104/397 = 0.2619647355163728
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_292
+Number of Nodes: 313
+Max level : 18, 
+Reconvergent nodes: 74/313 = 0.2364217252396166
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_293
+Number of Nodes: 487
+Max level : 16, 
+Reconvergent nodes: 100/487 = 0.2053388090349076
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_294
+Number of Nodes: 463
+Max level : 19, 
+Reconvergent nodes: 95/463 = 0.20518358531317496
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_295
+Number of Nodes: 373
+Max level : 18, 
+Reconvergent nodes: 109/373 = 0.29222520107238603
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_296
+Number of Nodes: 365
+Max level : 10, 
+Reconvergent nodes: 83/365 = 0.2273972602739726
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_297
+Number of Nodes: 374
+Max level : 16, 
+Reconvergent nodes: 79/374 = 0.21122994652406418
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_298
+Number of Nodes: 360
+Max level : 17, 
+Reconvergent nodes: 89/360 = 0.24722222222222223
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_299
+Number of Nodes: 307
+Max level : 11, 
+Reconvergent nodes: 75/307 = 0.24429967426710097
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_300
+Number of Nodes: 455
+Max level : 19, 
+Reconvergent nodes: 119/455 = 0.26153846153846155
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_301
+Number of Nodes: 397
+Max level : 18, 
+Reconvergent nodes: 90/397 = 0.22670025188916876
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_302
+Number of Nodes: 444
+Max level : 18, 
+Reconvergent nodes: 99/444 = 0.22297297297297297
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_303
+Number of Nodes: 320
+Max level : 19, 
+Reconvergent nodes: 71/320 = 0.221875
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_304
+Number of Nodes: 425
+Max level : 19, 
+Reconvergent nodes: 104/425 = 0.2447058823529412
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_305
+Number of Nodes: 323
+Max level : 14, 
+Reconvergent nodes: 74/323 = 0.22910216718266255
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_306
+Number of Nodes: 340
+Max level : 15, 
+Reconvergent nodes: 70/340 = 0.20588235294117646
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_307
+Number of Nodes: 407
+Max level : 15, 
+Reconvergent nodes: 85/407 = 0.20884520884520885
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_308
+Number of Nodes: 442
+Max level : 16, 
+Reconvergent nodes: 110/442 = 0.248868778280543
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_309
+Number of Nodes: 343
+Max level : 13, 
+Reconvergent nodes: 76/343 = 0.22157434402332363
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_310
+Number of Nodes: 454
+Max level : 16, 
+Reconvergent nodes: 91/454 = 0.20044052863436124
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_311
+Number of Nodes: 372
+Max level : 16, 
+Reconvergent nodes: 78/372 = 0.20967741935483872
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_312
+Number of Nodes: 350
+Max level : 19, 
+Reconvergent nodes: 85/350 = 0.24285714285714285
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_313
+Number of Nodes: 391
+Max level : 11, 
+Reconvergent nodes: 87/391 = 0.22250639386189258
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_314
+Number of Nodes: 394
+Max level : 16, 
+Reconvergent nodes: 103/394 = 0.2614213197969543
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_315
+Number of Nodes: 307
+Max level : 16, 
+Reconvergent nodes: 68/307 = 0.22149837133550487
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_316
+Number of Nodes: 500
+Max level : 15, 
+Reconvergent nodes: 111/500 = 0.222
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_317
+Number of Nodes: 354
+Max level : 15, 
+Reconvergent nodes: 84/354 = 0.23728813559322035
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_318
+Number of Nodes: 329
+Max level : 10, 
+Reconvergent nodes: 78/329 = 0.23708206686930092
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_319
+Number of Nodes: 499
+Max level : 15, 
+Reconvergent nodes: 128/499 = 0.2565130260521042
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_320
+Number of Nodes: 304
+Max level : 19, 
+Reconvergent nodes: 66/304 = 0.21710526315789475
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_321
+Number of Nodes: 440
+Max level : 19, 
+Reconvergent nodes: 101/440 = 0.22954545454545455
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_322
+Number of Nodes: 339
+Max level : 13, 
+Reconvergent nodes: 73/339 = 0.2153392330383481
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_323
+Number of Nodes: 455
+Max level : 18, 
+Reconvergent nodes: 114/455 = 0.25054945054945055
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_324
+Number of Nodes: 470
+Max level : 19, 
+Reconvergent nodes: 99/470 = 0.21063829787234042
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_325
+Number of Nodes: 329
+Max level : 16, 
+Reconvergent nodes: 73/329 = 0.22188449848024316
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_326
+Number of Nodes: 358
+Max level : 16, 
+Reconvergent nodes: 87/358 = 0.2430167597765363
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_327
+Number of Nodes: 319
+Max level : 16, 
+Reconvergent nodes: 77/319 = 0.2413793103448276
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_328
+Number of Nodes: 370
+Max level : 16, 
+Reconvergent nodes: 82/370 = 0.22162162162162163
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_329
+Number of Nodes: 397
+Max level : 19, 
+Reconvergent nodes: 112/397 = 0.28211586901763225
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_330
+Number of Nodes: 464
+Max level : 12, 
+Reconvergent nodes: 122/464 = 0.2629310344827586
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_331
+Number of Nodes: 442
+Max level : 17, 
+Reconvergent nodes: 101/442 = 0.22850678733031674
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_332
+Number of Nodes: 447
+Max level : 19, 
+Reconvergent nodes: 99/447 = 0.2214765100671141
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_333
+Number of Nodes: 300
+Max level : 13, 
+Reconvergent nodes: 65/300 = 0.21666666666666667
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_334
+Number of Nodes: 422
+Max level : 14, 
+Reconvergent nodes: 102/422 = 0.24170616113744076
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_335
+Number of Nodes: 431
+Max level : 18, 
+Reconvergent nodes: 100/431 = 0.23201856148491878
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_336
+Number of Nodes: 472
+Max level : 16, 
+Reconvergent nodes: 116/472 = 0.2457627118644068
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_337
+Number of Nodes: 380
+Max level : 18, 
+Reconvergent nodes: 82/380 = 0.21578947368421053
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_338
+Number of Nodes: 384
+Max level : 11, 
+Reconvergent nodes: 90/384 = 0.234375
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_339
+Number of Nodes: 450
+Max level : 18, 
+Reconvergent nodes: 96/450 = 0.21333333333333335
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_340
+Number of Nodes: 473
+Max level : 18, 
+Reconvergent nodes: 95/473 = 0.20084566596194503
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_341
+Number of Nodes: 372
+Max level : 19, 
+Reconvergent nodes: 79/372 = 0.21236559139784947
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_342
+Number of Nodes: 470
+Max level : 18, 
+Reconvergent nodes: 118/470 = 0.251063829787234
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_343
+Number of Nodes: 317
+Max level : 18, 
+Reconvergent nodes: 78/317 = 0.24605678233438485
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_344
+Number of Nodes: 471
+Max level : 16, 
+Reconvergent nodes: 95/471 = 0.20169851380042464
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_345
+Number of Nodes: 382
+Max level : 16, 
+Reconvergent nodes: 82/382 = 0.21465968586387435
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_346
+Number of Nodes: 382
+Max level : 16, 
+Reconvergent nodes: 85/382 = 0.22251308900523561
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_347
+Number of Nodes: 366
+Max level : 17, 
+Reconvergent nodes: 74/366 = 0.20218579234972678
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_348
+Number of Nodes: 434
+Max level : 15, 
+Reconvergent nodes: 102/434 = 0.2350230414746544
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_349
+Number of Nodes: 487
+Max level : 16, 
+Reconvergent nodes: 112/487 = 0.2299794661190965
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_350
+Number of Nodes: 311
+Max level : 13, 
+Reconvergent nodes: 68/311 = 0.21864951768488747
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_351
+Number of Nodes: 398
+Max level : 12, 
+Reconvergent nodes: 82/398 = 0.20603015075376885
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_352
+Number of Nodes: 319
+Max level : 17, 
+Reconvergent nodes: 74/319 = 0.23197492163009403
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_353
+Number of Nodes: 453
+Max level : 18, 
+Reconvergent nodes: 123/453 = 0.271523178807947
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_354
+Number of Nodes: 481
+Max level : 10, 
+Reconvergent nodes: 107/481 = 0.22245322245322247
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_355
+Number of Nodes: 331
+Max level : 16, 
+Reconvergent nodes: 87/331 = 0.2628398791540785
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_356
+Number of Nodes: 330
+Max level : 12, 
+Reconvergent nodes: 72/330 = 0.21818181818181817
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_357
+Number of Nodes: 413
+Max level : 14, 
+Reconvergent nodes: 85/413 = 0.20581113801452786
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_358
+Number of Nodes: 372
+Max level : 18, 
+Reconvergent nodes: 85/372 = 0.22849462365591397
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_359
+Number of Nodes: 320
+Max level : 12, 
+Reconvergent nodes: 70/320 = 0.21875
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_360
+Number of Nodes: 461
+Max level : 16, 
+Reconvergent nodes: 93/461 = 0.2017353579175705
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_361
+Number of Nodes: 499
+Max level : 18, 
+Reconvergent nodes: 113/499 = 0.22645290581162325
+-----------------------------------
+
+-----------------------------------
+Circuit Name: Depth_10_20_Nodes_300_500_S0_362
+Number of Nodes: 444
+Max level : 17, 
+Reconvergent nodes: 100/444 = 0.22522522522522523
 -----------------------------------
 
