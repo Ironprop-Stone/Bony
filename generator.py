@@ -54,6 +54,7 @@ class Gate:
 		self.fanInList = []
 		self.fanOutList = []
 		self.is_branch = 0
+		self.logic_stage = -1
 	def __del__(self):
 		pass	
 
@@ -106,6 +107,7 @@ def growGraph(stageModule, design):
 			gate  = Gate()
 			gateCount += 1
 			gate.serNum = gateCount
+			gate.logic_stage = i
 			stageModule[i].stageGates.append(gate)
 			design.serNum2Gate[gate.serNum] = gate
 	print('[INFO] No of Gates: {:}, Level: {:}'.format(gateCount, design.stages))
@@ -253,7 +255,7 @@ def normalizeInterconnects(stageModule, design, uf):
 		if not uf.is_connected(0, node.serNum-1):
 			node = design.serNum2Gate[idx]
 			for times in range(50):
-				allocRandStage = random.randint(i + 1, design.stages - 1)
+				allocRandStage = random.randint(node.logic_stage + 1, design.stages - 1)
 				allocRandNode = random.randint(0, len(stageModule[allocRandStage].stageGates) - 1)
 				nodeConnect = stageModule[allocRandStage].stageGates[allocRandNode]
 				if not nodeConnect.isInputNode:

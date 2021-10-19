@@ -25,8 +25,13 @@ def generate_circuit(circuit_name, filename):
         stageModule = []
         totGates = 0
         totGates = growGraph(stageModule, design)  # grow the graph using nested lists
+        
         for idx in range(1, design.no_nodes+1, 1):
+            node = design.serNum2Gate[idx]
+            if node.logic_stage == design.stages - 1:
+                continue
             design.dis_connection.append(idx)
+
         uf = UnionFind(design.no_nodes)
         circuit_info = designFramework(stageModule, targetfile, design, uf)
         # print(" The total number of gates: ", totGates)

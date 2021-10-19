@@ -1,182 +1,163 @@
-from os import name, replace
+from os import replace
 import sys
 import re
 import glob
 import platform
-from union_find import UnionFind
 
-name2idx = {}
-allGateVec = []
-
-class Gate:
-    def __init__(self, gate_name):
-        self.gate_name = gate_name
-        self.gate_type = ''
-        self.pre_list = []
-        self.next_list = []
-        self.is_po = False
-        self.enable = False
-
-def new_gate(gate_name):
-    gate_inst = Gate(gate_name)
-    allGateVec.append(gate_inst)
-
-def find_keys_list(name_list, find_keys):
-    res = []
-    for idx, ele in enumerate(name_list):
-        if ele == find_keys[0]:
-            res.append(name_list[idx+1])
-            find_keys.pop(0)
-            if len(find_keys) == 0:
-                break
-    return res
-
-def back_non_buff(idx):
-    res = idx
-    gate = allGateVec[res]
-    while gate.gate_type == 'BUF':
-        res = gate.pre_list[0]
-        gate = allGateVec[res]
-    return res
-    
 def convert_verilog_bench(verilog_file, bench_file):
     v_file = open(verilog_file, 'r')
     v_lineList = v_file.readlines()
-    proc_v_lineList = []
     b_file = open(bench_file, 'w')
+
+    inv_node_exist = {}
     node_cnt = 0
+
     line_idx = 0
-
-    name2idx.clear()
-    allGateVec.clear()
-
-    # Process content
-    new_gate('1\'h0')
-    name2idx['1\'h0'] = len(name2idx)
-    node_cnt += 1
-    new_gate('1\'h1')
-    name2idx['1\'h1'] = len(name2idx)
-    node_cnt += 1
-    while line_idx < len(v_lineList):
+    while True:
         line = v_lineList[line_idx]
-        if '/*' == line.rstrip()[:2] or 'module' in line or '(*' == line.rstrip()[:2]:
-            pass
-        elif 'wire' in line or 'output' in line or 'input' in line:
-            line = line.lstrip().rstrip().replace('\n', '').replace(';', '')
-            text = line.split(' ')[-1]
-            new_gate(text)
-            name2idx[text] = len(name2idx)
-            if 'input' in line:
-                allGateVec[name2idx[text]].gate_type = 'INPUT'
-            if 'output' in line:
-                allGateVec[name2idx[text]].is_po = True
-            proc_v_lineList.append(line)
-            node_cnt += 1
-        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line \
-            or 'XOR' in line or 'NAND' in line or 'NOR' in line:
-            new_line = ''
-            while not ';' in line:
-                line = line.lstrip().rstrip().replace('\n', '')
-                new_line += line
-                line_idx += 1
-                line = v_lineList[line_idx]
-            line = line.lstrip().rstrip().replace('\n', '')
-            new_line += line
-            proc_v_lineList.append(new_line)
-        elif 'assign' in line:
-            line = line.lstrip().rstrip().replace('\n', '').replace(';', '')
-            proc_v_lineList.append(line)
         line_idx += 1
-
-    for line in proc_v_lineList:
-        if 'input' in line or 'output' in line:
+        if '(*' in line:
             continue
-        elif 'assign' in line:
-            line = line.replace(';', '')
-            name_list = line.split(' ')
-            dst_name = name_list[1]
-            src_name = name_list[3]
-            allGateVec[name2idx[dst_name]].gate_type = 'BUF'
-            allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
-        elif 'NOT' in line or 'AND' in line or 'BUF' in line or 'OR' in line \
-            or 'XOR' in line or 'NAND' in line or 'NOR' in line:
-            line = line.replace(',', '').replace(';', '')
-            gate_type = line.split(' ')[0]
-            name_list_tmp = line.split('(')
-            name_list = []
-            for tmp_line in name_list_tmp:
-                name_list += tmp_line.split(')')
-            if gate_type == 'NOT' or gate_type == 'BUF':
-                res = find_keys_list(name_list, ['.A', '.Y'])
-                src_name = res[0]
-                dst_name = res[1]
-                allGateVec[name2idx[dst_name]].gate_type = gate_type
-                allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name]]
-            else:
-                res = find_keys_list(name_list, ['.A', '.B', '.Y'])
-                src_name_1 = res[0]
-                src_name_2 = res[1]
-                dst_name = res[2]
-                allGateVec[name2idx[dst_name]].gate_type = gate_type
-                allGateVec[name2idx[dst_name]].pre_list = [name2idx[src_name_1], name2idx[src_name_2]]
-        
-
-    # Find the non_buff gate
-    for gate in allGateVec:
-        if gate.gate_type != 'BUF':
-            for idx, pre_idx in enumerate(gate.pre_list):
-                gate.pre_list[idx] = back_non_buff(pre_idx)
-    for idx, gate in enumerate(allGateVec):
-        if gate.is_po and gate.gate_type == 'BUF':
-            non_buf_idx = back_non_buff(idx)
-            gate.is_po = False
-            if allGateVec[non_buf_idx].gate_type != 'INPUT' and non_buf_idx !=0 and non_buf_idx!=1:
-                allGateVec[non_buf_idx].is_po = True
+        if "endmodule" in line:  # assume that netlist file has only one module!
+            break
+        elif "//" == line[:2]:  # ignore lines that start with comments ... e.g., synopsys header
+            line = ''
+        elif ';' in line:
+            line = line.lstrip()
+            line = line.replace('\n', '')
+            # print(line)
+            new_lines = process_cell(line, inv_node_exist)
+            # print(new_lines)
+            # print('------------------------\n')
+            for new_line in new_lines:
+                b_file.write(new_line)
+                if not 'INPUT' in new_line:
+                    node_cnt += 1
     
-    for idx, gate in enumerate(allGateVec):
-        for pre_idx in gate.pre_list:
-            allGateVec[pre_idx].next_list.append(idx)
-    
-    for gate in allGateVec:
-        if gate.gate_type == 'INPUT':
-            b_file.write('INPUT({:})\n'.format(gate.gate_name))
-    b_file.write('\n')
-
-    for gate in allGateVec:
-        if gate.is_po:
-            is_vaild = True
-            for pre_idx in gate.pre_list:
-                if pre_idx == 0 or pre_idx == 1:
-                    is_vaild = False
-            if is_vaild:
-                b_file.write('OUTPUT({:})\n'.format(gate.gate_name))
-    b_file.write('\n')
-
-    no_gate = 0
-    for gate in allGateVec:
-        if gate.gate_type == 'AND' or gate.gate_type == 'OR' or gate.gate_type == 'NOT' or gate.is_po \
-            or gate.gate_type == 'NAND' or gate.gate_type == 'NOR' or gate.gate_type == 'XOR': 
-            line = gate.gate_name + ' = ' + gate.gate_type + '('
-            for pre_idx in gate.pre_list:
-                if pre_idx == gate.pre_list[-1]:
-                    line += allGateVec[pre_idx].gate_name + ')\n'
-                else:
-                    line += allGateVec[pre_idx].gate_name + ', '
-            b_file.write(line)
-            no_gate += 1
-    b_file.write('\n')
+    print("[SUCCESS] Convert {:} Done, with {:} nodes".format(verilog_file, node_cnt))
 
     b_file.close()
     v_file.close()
-    print("[SUCCESS] Convert {:} Done, with {:} nodes".format(verilog_file, no_gate))
 
+def process_cell(line, inv_node_exist):
+    res = []
+    newline = ''
+    line = line.replace(' ;', '')
+    line = line.replace(';', '')
+
+    if "input " in line:
+        to_process = line.replace("input ", "").replace(' ', '').replace(";", '').split(",")
+        # print(to_process)
+        for port in to_process:
+            newline += "INPUT(" + port + ")\n"
+        return [newline]
+    elif "output " in line:
+        to_process = line.replace("output ", "").replace(' ', '').replace(";", '').split(",")
+        # print(to_process)
+        for port in to_process:
+            newline += "OUTPUT(" + port + ")\n"
+        return [newline]
+    elif "module " in line:
+        return ["###\n"]
+    elif "wire " in line:
+        return [""]
+    elif "assign" in line:
+        if '= ~(' in line:
+            dst_name = line.rstrip().split(' ')[1]
+            src_list = line.split('= ~(')[-1].replace(')', '')
+            src_list = src_list.split(' ')
+            operator = symbol2text(src_list[1])
+            res.append(dst_name+'_e = '+operator+'('+src_list[0]+', '+src_list[2]+')\n')
+            res.append(dst_name+' = NOT('+dst_name+'_e)\n')
+            return res
+        else:
+            line = line.replace('(', '')
+            line = line.replace(')', '')
+            test = line.split(" ")
+            # assign a = ~b
+            if len(test) == 4:
+                if test[3][0] == '~':
+                    newline = test[1] + ' = NOT(' + test[3][1:] + ')\n'
+                else:
+                    newline = test[1] + ' = ' + test[3] + '\n'
+                return [newline]
+                
+            # assign a = c ? x : y
+            elif len(test) == 8 and '?' in line:
+                dst_node = test[1]
+                res, con_node = proc_inv(test[3], res, [], inv_node_exist)
+                con_node = con_node[0]
+                res, true_node = proc_inv(test[5], res, [], inv_node_exist)
+                true_node = true_node[0]
+                res, false_node = proc_inv(test[7], res, [], inv_node_exist)
+                false_node = false_node[0]
+
+                con_true = '{}_T = AND({}, {})\n'.format(dst_node, con_node, true_node)
+                res.append(con_true)
+                if not con_node+'_inv' in inv_node_exist.keys():
+                    inv_node_exist[con_node+'_inv'] = True
+                    res.append(con_node + '_inv' + ' = NOT(' + con_node + ')\n')
+                con_false = '{}_F = AND({}, {})\n'.format(dst_node, con_node + '_inv', false_node)
+                res.append(con_false)
+                res.append('{} = OR({}_T, {}_F)\n'.format(dst_node, dst_node, dst_node))
+                return res
+            
+            # assign a = b & c
+            elif len(test) == 6:
+                src_node = []
+                operator = ''
+                for idx, ele in enumerate(test):
+                    if idx < 3:
+                        continue
+                    if idx % 2 == 1:
+                        res, src_node = proc_inv(test[idx], res, src_node, inv_node_exist)
+                    else:
+                        operator = symbol2text(test[idx])
+                newline = test[1] + ' = ' + operator + '(' + src_node[0] + ', ' + src_node[1] + ')\n'
+                res.append(newline)
+                return res
+            
+            else:
+                print('[Error] Not legal format'.format(line))
+                raise
+
+    else:
+        newline = line
+        print('[Warning] No info: {}'.format(newline))
+        return [newline + '\n']
+
+def proc_inv(ele, res, src_node, inv_node_exist):
+    if ele[0] == '~':
+        gate_name = ele[1:]
+        gate_name_inv = gate_name + '_inv'
+        if not gate_name_inv in inv_node_exist.keys():
+            inv_node_exist[gate_name_inv] = True
+            res.append(gate_name_inv + ' = NOT(' + gate_name + ')\n')
+        src_node.append(gate_name_inv)
+    else:
+        src_node.append(ele)
+    return res, src_node
+
+
+def symbol2text(symbol):
+    gate_type = ''
+    if symbol == '&':
+        gate_type = 'AND'
+    elif symbol == '|':
+        gate_type = 'OR'
+    elif symbol == '^':
+        gate_type = 'XOR'
+    else:
+        print('[ERROR] Unknown symbol : {}'.format(symbol))
+        raise
+    return gate_type
 
 def main():
     # verilog_folder_1 = '../../EPFL_benchmarks/arithmetic/*.v'
     # verilog_folder_2 = '../../EPFL_benchmarks/random_control/*.v'
     # bench_folder = '../../EPFL_benchmarks/bench/'
     
-    verilog_folder = './syn_verilog/*.v'
+    verilog_folder = './verilog/*.v'
     for file in glob.glob(verilog_folder):
         if (platform.system() == 'Linux'):
             name = file.split("/")
@@ -184,12 +165,11 @@ def main():
         else:
             name = file.split("\\")
             name = name[1].split(".")
-
-        # if name[0] != 'b15_C':
-        #     continue
         
+        # if name[0] != 'sr_n_0003_pk2_030_pg_040_t_9_sat_1':
+        #     continue
         print('[INFO] Converting Circuit: {}'.format(name[0]))
-        bench_file = './syn_bench/' + name[0] + '.bench'
+        bench_file = './bench/' + name[0] + '.bench'
         convert_verilog_bench(file, bench_file)
 
 
